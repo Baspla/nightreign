@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tims Nightreign Helfer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center py-8 gap-8">
+  <h1 class="text-3xl font-bold text-center">Tims Nightreign Helfer</h1>
+  <div class="bg-gray-800 rounded-xl shadow-lg p-8 w-full max-w-md flex flex-col items-center">
+    <h1 class="text-2xl font-bold text-purple-300 mb-4">Nightreign Timer</h1>
+    <div id="phase" class="text-xl text-white mb-2">Roundtable</div>
+    <div id="time" class="text-4xl font-mono text-purple-200 mb-4">04:25</div>
+
+    <!-- Progress Bar with 4 Segments -->
+    <div class="relative w-full h-4 bg-gray-700 rounded mb-6 flex items-center">
+      <!-- Dynamic Dividers -->
+      <div id="phase-dividers" class="absolute top-0 left-0 w-full h-full pointer-events-none"></div>
+      <!-- Progress Indicator -->
+      <div id="progress-indicator" class="absolute top-0 h-4 bg-purple-400 rounded transition-all duration-300"
+        style="width: 8px; left: 0"></div>
+    </div>
+
+
+    <!-- Control Buttons -->
+    <div class="flex gap-2 mb-2">
+      <button id="startBtn"
+        class="bg-purple-500 hover:bg-purple-600 text-gray-900 font-bold py-2 px-6 rounded focus:outline-none transition">
+        Start
+      </button>
+      <button id="resetBtn"
+        class="bg-gray-600 hover:bg-gray-700 text-gray-200 font-bold py-2 px-4 rounded focus:outline-none transition">
+        Reset
+      </button>
+    </div>
+
+    <!-- Phase Jump Buttons -->
+    <div class="flex gap-2 mt-2">
+      <button
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        data-phase="0">1</button>
+      <button
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        data-phase="1">2</button>
+      <button
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        data-phase="2">3</button>
+      <button
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        data-phase="3">4</button>
+    </div>
+  </div>
+  <div class="w-full max-w-6xl">
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th class="px-2 py-2 border-b border-gray-700">Boss</th>
+            <th class="px-2 py-2 border-b border-gray-700">Am Besten</th>
+            <th class="px-2 py-2 border-b border-gray-700">Standard</th>
+            <th class="px-2 py-2 border-b border-gray-700">Slash</th>
+            <th class="px-2 py-2 border-b border-gray-700">Strike</th>
+            <th class="px-2 py-2 border-b border-gray-700">Pierce</th>
+            <th class="px-2 py-2 border-b border-gray-700">Magic</th>
+            <th class="px-2 py-2 border-b border-gray-700">Fire</th>
+            <th class="px-2 py-2 border-b border-gray-700">Lightning</th>
+            <th class="px-2 py-2 border-b border-gray-700">Holy</th>
+            <th class="px-2 py-2 border-b border-gray-700">Bleed</th>
+            <th class="px-2 py-2 border-b border-gray-700">Frostbite</th>
+            <th class="px-2 py-2 border-b border-gray-700">Poison</th>
+            <th class="px-2 py-2 border-b border-gray-700">Rot</th>
+            <th class="px-2 py-2 border-b border-gray-700">Sleep</th>
+            <th class="px-2 py-2 border-b border-gray-700">Madness</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Gladius</td>
+            <td class="px-2 py-2 border-b border-gray-700">😇 Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+10%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-50%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+35%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Adel</td>
+            <td class="px-2 py-2 border-b border-gray-700">☠️ Poison</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-50%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Gnoster (Motte)</td>
+            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+25%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+25%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-50%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+40%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Gnoster (Skorpion)</td>
+            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+35%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Maris</td>
+            <td class="px-2 py-2 border-b border-gray-700">⚡ Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-50%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+40%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Libra</td>
+            <td class="px-2 py-2 border-b border-gray-700">👁️ Madness</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+10%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+20%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+35%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Fulghor</td>
+            <td class="px-2 py-2 border-b border-gray-700">⚡ Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-30%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">154</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Caligo</td>
+            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+35%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">The Shape Of Night</td>
+            <td class="px-2 py-2 border-b border-gray-700">😇 Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+10%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+20%</td>
+            <td class="px-2 py-2 border-b border-gray-700">+0%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-green-500">+35%</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-yellow-500">252</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-orange-500">541</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-red-500">Immun</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2">Heolstor</td>
+            <td class="px-2 py-2">😇 Holy</td>
+            <td class="px-2 py-2">+0%</td>
+            <td class="px-2 py-2 text-red-500">-10%</td>
+            <td class="px-2 py-2 text-green-500">+10%</td>
+            <td class="px-2 py-2 text-green-500">+15%</td>
+            <td class="px-2 py-2">+0%</td>
+            <td class="px-2 py-2">+0%</td>
+            <td class="px-2 py-2 text-green-500">+20%</td>
+            <td class="px-2 py-2 text-green-500">+20%</td>
+            <td class="px-2 py-2 text-red-500">Immun</td>
+            <td class="px-2 py-2 text-red-500">Immun</td>
+            <td class="px-2 py-2 text-red-500">Immun</td>
+            <td class="px-2 py-2 text-yellow-500">252</td>
+            <td class="px-2 py-2 text-orange-500">541</td>
+            <td class="px-2 py-2 text-red-500">Immun</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-gray-400 text-xs mt-4">Prozente: Bonus/Reduktion an Schaden. Höhere Zahlen = anfälliger für Status.
+    </p>
+  </div>
+
+  <div class="w-full max-w-6xl">
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th class="px-2 py-2 border-b border-gray-700">Charakter</th>
+            <th class="px-2 py-2 border-b border-gray-700">HP</th>
+            <th class="px-2 py-2 border-b border-gray-700">FP</th>
+            <th class="px-2 py-2 border-b border-gray-700">Stamina</th>
+            <th class="px-2 py-2 border-b border-gray-700">Strength</th>
+            <th class="px-2 py-2 border-b border-gray-700">Dexterity</th>
+            <th class="px-2 py-2 border-b border-gray-700">Intelligence</th>
+            <th class="px-2 py-2 border-b border-gray-700">Faith</th>
+            <th class="px-2 py-2 border-b border-gray-700">Arcane</th>
+            <th class="px-2 py-2 border-b border-gray-700">Spezial-Moveset</th>
+            <th class="px-2 py-2 border-b border-gray-700">Empfohlene Waffenklassen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Wylder</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px极2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700">Großschwert</td>
+            <td class="px-2 py-2 border-b border-gray-700">Großschwerter, Gerade Schwerter, Flegel, Kolossalwaffen,
+              Großäxte, Hämmer</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Guardian</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700">Hellebarde</td>
+            <td class="px-2 py-2 border-b border-gray-700">Hellebarden, Äxte, Großspeere, Stichschwerter</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Duchess</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700">Dolch</td>
+            <td class="px-2 py-2 border-b border-gray-700">Dolche, Katanas (Zweihand), Faustwaffen</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Recluse</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700">Keine</td>
+            <td class="px-2 py-2 border-b border-gray-700">Zauberstäbe, Schwerter</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Ironeye</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700">Bogen</td>
+            <td class="px-2 py-2 border-b border-gray-700">Bögen, Katanas, Stichschwerter, Dolche</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">Raider</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</极>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700">Großäxte</td>
+            <td class="px-2 py-2 border-b border-gray-700">Kolossalwaffen, Großäxte, Großhämmer, Großschwerter,
+              Hellebarden</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">Executor</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">D</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">A</td>
+            <td class="px-2 py-2 border-b border-gray-700">Katana</td>
+            <td class="px-2 py-2 border-b border-gray-700">Katanas, Dolche, Stichschwerter, Bögen</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2">Revenant</td>
+            <td class="px-2 py-2 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 text-center text-green-400">B</td>
+            <td class="px-2 py-2 text-center text-green-400">A</td>
+            <td class="px-2 py-2 text-center text-green-400">B</td>
+            <td class="px-2 py-2 text-center text-gray-400">C</td>
+            <td class="px-2 py-2 text-center text-green-400">B</td>
+            <td class="px-2 py-2 text-center text-yellow-400">S</td>
+            <td class="px-2 py-2 text-center text-gray-400">C</td>
+            <td class="px-2 py-2">Keine</td>
+            <td class="px-2 py-2">Großhämmer, Zauberstäbe, Schwerter, Faustwaffen</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  </div>
+  <p class="text-gray-400 text-xs mt-4">Diese Seite ist für meinen persönlichen Gebrauch und steht in keiner Verbindung
+    zu einem Spiel oder Unternehmen. Alle Charaktere, Namen und verwandte Gegenstände sind urheberrechtlich geschützt
+    durch ihre jeweiligen Eigentümer.</p>
+  </p>
+
+
+  <script>
+    // Phase definitions in seconds
+    const phases = [
+      { name: "Sturm 1 Phase", duration: 4 * 60 + 25 },
+      { name: "Sturm wird kleiner", duration: 2 * 60 + 55 },
+      { name: "Strum 2 Phase", duration: 3 * 60 + 25 },
+      { name: "Auf zum Boss", duration: 2 * 60 + 55 },
+    ];
+    const bossFightName = "Boss Fight";
+    const totalDuration = phases.reduce((sum, p) => sum + p.duration, 0);
+
+    let currentPhase = 0;
+    let phaseTimeLeft = phases[0].duration;
+    let elapsed = 0;
+    let timer = null;
+    let running = false;
+
+    const phaseDiv = document.getElementById('phase');
+    const timeDiv = document.getElementById('time');
+    const progressIndicator = document.getElementById('progress-indicator');
+    const startBtn = document.getElementById('startBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const phaseJumpBtns = document.querySelectorAll('.phase-jump');
+
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60).toString().padStart(2, '0');
+      const s = (sec % 60).toString().padStart(2, '0');
+      return `${m}:${s}`;
+    }
+
+    function getPhaseStartElapsed(phaseIdx) {
+      let sum = 0;
+      for (let i = 0; i < phaseIdx; ++i) sum += phases[i].duration;
+      return sum;
+    }
+
+    function updateDisplay() {
+      if (currentPhase < phases.length) {
+        phaseDiv.textContent = phases[currentPhase].name;
+        timeDiv.textContent = formatTime(phaseTimeLeft);
+      } else {
+        phaseDiv.textContent = bossFightName;
+        timeDiv.textContent = "--:--";
+      }
+      // Indicator position: not filled, just a bar showing current progress
+      const progress = Math.min(elapsed / totalDuration, 1);
+      const barWidth = progressIndicator.parentElement.offsetWidth;
+      // Center the indicator bar (12px wide)
+      const indicatorWidth = 12;
+      progressIndicator.style.left = `calc(${progress * 100}% - ${indicatorWidth / 2}px)`;
+    }
+
+    function nextPhase() {
+      currentPhase++;
+      if (currentPhase < phases.length) {
+        phaseTimeLeft = phases[currentPhase].duration;
+      } else {
+        phaseTimeLeft = 0;
+      }
+    }
+
+    function resetTimer() {
+      clearTimeout(timer);
+      running = false;
+      currentPhase = 0;
+      phaseTimeLeft = phases[0].duration;
+      elapsed = 0;
+      startBtn.textContent = "Start";
+      updateDisplay();
+    }
+
+    function tick() {
+      if (currentPhase < phases.length) {
+        if (phaseTimeLeft > 0) {
+          phaseTimeLeft--;
+          elapsed++;
+        } else {
+          nextPhase();
+        }
+        updateDisplay();
+        if (currentPhase < phases.length) {
+          timer = setTimeout(tick, 1000);
+        } else {
+          // Boss Fight reached, allow restart
+          running = false;
+          startBtn.textContent = "Start";
+          updateDisplay();
+        }
+      }
+    }
+
+    startBtn.addEventListener('click', () => {
+      if (running) return;
+      if (currentPhase >= phases.length) {
+        resetTimer();
+      }
+      running = true;
+      startBtn.textContent = "GL HF";
+      tick();
+    });
+
+    resetBtn.addEventListener('click', () => {
+      resetTimer();
+    });
+
+    phaseJumpBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const phaseIdx = parseInt(btn.getAttribute('data-phase'));
+        clearTimeout(timer);
+        running = false;
+        currentPhase = phaseIdx;
+        phaseTimeLeft = phases[phaseIdx].duration;
+        elapsed = getPhaseStartElapsed(phaseIdx);
+        startBtn.textContent = "Start";
+        updateDisplay();
+      });
+    });
+
+    const phaseDividers = document.getElementById('phase-dividers');
+
+    // Calculate cumulative phase percentages
+    function updateDividers() {
+      phaseDividers.innerHTML = '';
+      let cumDuration = 0;
+      for (let i = 0; i < phases.length - 1; i++) {
+        cumDuration += phases[i].duration;
+        const percent = (cumDuration / totalDuration) * 100;
+        const divider = document.createElement('div');
+        divider.className = 'absolute top-0 h-full border-l border-gray-500';
+        divider.style.left = `calc(${percent}% - 1px)`; // -1px to center the 2px border
+        phaseDividers.appendChild(divider);
+      }
+    }
+
+    // Call this after DOM is ready and on resize
+    updateDividers();
+    window.addEventListener('resize', updateDividers);
+
+
+    // Initial display
+    updateDisplay();
+
+    // Responsive: update indicator on resize
+    window.addEventListener('resize', updateDisplay);
+  </script>
+
+</body>
+
+</html>
