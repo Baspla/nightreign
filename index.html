@@ -54,33 +54,36 @@
         data-phase="3">4</button>
     </div>
   </div>
-  <div class="w-full max-w-6xl">
+
+  <details open class="w-full max-w-6xl">
+
+    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Boss Weaknesses</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
         <thead>
           <tr class="bg-gray-800 text-gray-200">
             <th class="px-2 py-2 border-b border-gray-700">Boss</th>
-            <th class="px-2 py-2 border-b border-gray-700">Best</th>
+            <th class="px-2 py-2 border-b border-gray-700">Best Element</th>
             <th class="px-2 py-2 border-b border-gray-700">Standard</th>
             <th class="px-2 py-2 border-b border-gray-700">Slash</th>
             <th class="px-2 py-2 border-b border-gray-700">Strike</th>
             <th class="px-2 py-2 border-b border-gray-700">Pierce</th>
-            <th class="px-2 py-2 border-b border-gray-700">Magic</th>
-            <th class="px-2 py-2 border-b border-gray-700">Fire</th>
-            <th class="px-2 py-2 border-b border-gray-700">Lightning</th>
-            <th class="px-2 py-2 border-b border-gray-700">Holy</th>
-            <th class="px-2 py-2 border-b border-gray-700">Bleed</th>
-            <th class="px-2 py-2 border-b border-gray-700">Frostbite</th>
-            <th class="px-2 py-2 border-b border-gray-700">Poison</th>
-            <th class="px-2 py-2 border-b border-gray-700">Rot</th>
-            <th class="px-2 py-2 border-b border-gray-700">Sleep</th>
-            <th class="px-2 py-2 border-b border-gray-700">Madness</th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="bleed.webp" alt="Bleed" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="frostbite.webp" alt="Frostbite" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="poison.webp" alt="Poison" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="rot.webp" alt="Scarlet Rot" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="sleep.webp" alt="Sleep" class="inline-block w-5 h-5 align-middle" /></th>
+            <th class="px-2 py-2 border-b border-gray-700"><img src="frenzy.webp" alt="Madness" class="inline-block w-5 h-5 align-middle" /></th>
           </tr>
         </thead>
         <tbody>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">Gladius</td>
-            <td class="px-2 py-2 border-b border-gray-700">😇 Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
@@ -98,7 +101,7 @@
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">Adel</td>
-            <td class="px-2 py-2 border-b border-gray-700">☠️ Poison</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="poison.webp" alt="Poison" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
@@ -116,7 +119,7 @@
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">Gnoster (Motte)</td>
-            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+25%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
@@ -134,7 +137,7 @@
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">Gnoster (Skorpion)</td>
-            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+20%</td>
@@ -152,7 +155,7 @@
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">Maris</td>
-            <td class="px-2 py-2 border-b border-gray-700">⚡ Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-red-500">-20%</td>
@@ -170,7 +173,7 @@
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">Libra</td>
-            <td class="px-2 py-2 border-b border-gray-700">👁️ Madness</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="frenzy.webp" alt="Madness" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+10%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
@@ -188,7 +191,7 @@
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">Fulghor</td>
-            <td class="px-2 py-2 border-b border-gray-700">⚡ Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
@@ -206,7 +209,7 @@
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">Caligo</td>
-            <td class="px-2 py-2 border-b border-gray-700">🔥 Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-red-500">-15%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
@@ -224,7 +227,7 @@
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">The Shape Of Night</td>
-            <td class="px-2 py-2 border-b border-gray-700">😇 Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2 border-b border-gray-700">+0%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-green-500">+15%</td>
             <td class="px-2 py-2 border-b border-gray-700 text-red-500">-10%</td>
@@ -242,7 +245,7 @@
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2">Heolstor</td>
-            <td class="px-2 py-2">😇 Holy</td>
+            <td class="px-2 py-2 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
             <td class="px-2 py-2">+0%</td>
             <td class="px-2 py-2 text-red-500">-10%</td>
             <td class="px-2 py-2 text-green-500">+10%</td>
@@ -264,9 +267,9 @@
     <p class="text-gray-400 text-xs mt-4">Percent: Bonus/Reduction in damage. Higher numbers = More susceptible to
       status effects.
     </p>
-  </div>
-
-  <div class="w-full max-w-6xl">
+  </details>
+  <details class="w-full max-w-6xl">
+    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Character Stats</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
         <thead>
@@ -323,7 +326,7 @@
             <td class="px-2 py-2 border-b border-gray-700 text-center text-green-400">B</td>
             <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
             <td class="px-2 py-2 border-b border-gray-700">Dagger</td>
-            <td class="px-2 py-2 border-b border-gray-700">Daggers, Katanas (Two-handed), Fist Weapons</td>
+            <td class="px-2 py-2 border-b border-gray-700">Daggers, Katanas (Two-handed), Fist Weapons,  Claws, Short Swords, Twinblades, Staves</td>
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">Recluse</td>
@@ -336,7 +339,7 @@
             <td class="px-2 py-2 border-b border-gray-700 text-center text-yellow-400">S</td>
             <td class="px-2 py-2 border-b border-gray-700 text-center text-gray-400">C</td>
             <td class="px-2 py-2 border-b border-gray-700">None</td>
-            <td class="px-2 py-2 border-b border-gray-700">Staves, Swords</td>
+            <td class="px-2 py-2 border-b border-gray-700">Staves, Seals, Swords</td>
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">Ironeye</td>
@@ -396,11 +399,270 @@
       </table>
 
     </div>
-  </div>
+  </details>
 
-  </div>
-  <p class="text-gray-400 text-xs mt-4">This site is for my personal use and is not affiliated with any game or company.
-    All characters, names, and related items are copyrighted by their respective owners. I can't guarantee the accuracy
+  <details class="w-full max-w-6xl">
+    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Magic Cocktail</summary>
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th colspan="6" class="px-2 py-2 border-b border-gray-700 text-center">Elements</th>
+            <th class="px-2 py-2 border-b border-gray-700">Name</th>
+            <th class="px-2 py-2 border-b border-gray-700">Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-700">
+            <td colspan="6" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Pure Magic</td>
+            <td class="px-2 py-2 border-b border-gray-700">Summons a tracking wisp that detonates on
+              contact, dealing periodic magic damage</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="6" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Pure Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700">Creates a whirlwind of flame; AoE fire damage
+              that burns for some time</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="6" class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Pure Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">Bloodhound’s Step: greatly enhances dodging
+              actions with lightning</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="6" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Pure Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">Divine Shield: increases poise and damage
+              negation (defensive buff)</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Magic/Fire</td>
+            <td class="px-2 py-2 border-b border-gray-700">Summons a wraith flame that pursues and explodes
+              on enemies</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Magic/Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">Carian Slash: broad forward slash with a magical
+              blade</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Magic/Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">Grants infinite FP for a short time (magic veil
+              for self and allies)</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Fire/Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">Become a fireball, barrel forward, raining
+              lightning on foes</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Fire/Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">Warming Stone: raises max HP and reduces status
+              buildup for allies, lowers enemy max HP</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="3" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">Lightning/Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">Automatic Parry: layer of lightning parries enemy
+              attacks for a short time</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">No Holy</td>
+            <td class="px-2 py-2 border-b border-gray-700">AoE gravity orb pulls in enemies, then explodes
+              for heavy damage</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">No Lightning</td>
+            <td class="px-2 py-2 border-b border-gray-700">Mixed affinity breath: damages enemies, restores
+              HP and FP to allies</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="fire.webp" alt="Fire" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2"class="px-2 py-2 border-b border-gray-700 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 border-b border-gray-700 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2 border-b border-gray-700">No Magic</td>
+            <td class="px-2 py-2 border-b border-gray-700">Creates a lightning rod; white lightning strikes
+              after a delay (AoE lightning)</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td colspan="2" class="px-2 py-2 text-center"><img src="magic.webp" alt="Magic" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 text-center"><img src="lightning.webp" alt="Lightning" class="inline-block w-5 h-5 align-middle" /></td>
+            <td colspan="2" class="px-2 py-2 text-center"><img src="holy.webp" alt="Holy" class="inline-block w-5 h-5 align-middle" /></td>
+            <td class="px-2 py-2">No Fire</td>
+            <td class="px-2 py-2">AoE cold storm, user retreats in ice block and
+              becomes invulnerable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="w-full max-w-6xl">
+    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Level Rune Requirements</summary>
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th class="px-2 py-2 border-b border-gray-700">Level</th>
+            <th class="px-2 py-2 border-b border-gray-700">Runes required</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">1</td>
+            <td class="px-2 py-2 border-b border-gray-700">0</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">2</td>
+            <td class="px-2 py-2 border-b border-gray-700">3,698</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">3</td>
+            <td class="px-2 py-2 border-b border-gray-700">7,922</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">4</td>
+            <td class="px-2 py-2 border-b border-gray-700">12,348</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">5</td>
+            <td class="px-2 py-2 border-b border-gray-700">16,978</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">6</td>
+            <td class="px-2 py-2 border-b border-gray-700">21,818</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">7</td>
+            <td class="px-2 py-2 border-b border-gray-700">26,869</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">8</td>
+            <td class="px-2 py-2 border-b border-gray-700">32,137</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">9</td>
+            <td class="px-2 py-2 border-b border-gray-700">37,624</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">10</td>
+            <td class="px-2 py-2 border-b border-gray-700">43,335</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">11</td>
+            <td class="px-2 py-2 border-b border-gray-700">49,271</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">12</td>
+            <td class="px-2 py-2 border-b border-gray-700">55,439</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">13</td>
+            <td class="px-2 py-2 border-b border-gray-700">61,840</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">14</td>
+            <td class="px-2 py-2 border-b border-gray-700">68,479</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2">15</td>
+            <td class="px-2 py-2">75,358</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-gray-400 text-xs mt-4">Total runes required to reach level 15: 513,116</p>
+  </details>
+
+  <details class="w-full max-w-6xl">
+    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2"> Libra Deals</summary>
+    <div class="overflow-x-auto">
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th class="px-2 py-2 border-b border-gray-700">Deal</th>
+            <th class="px-2 py-2 border-b border-gray-700">Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I want more runes.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Grants Nightfarers the Symbol of Avarice Talisman, which lets
+              them gain more runes but lose HP.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I desire a flask.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Grants one restoration flask charge at the cost of taking
+              away a portion of your maximum HP.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I want the power of a demon.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Grants bonuses at random intervals in combat, but builds up
+              Madness.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I want to hold death at bay.</td>
+            <td class="px-2 py-2 border-b border-gray-700">When HP is low, restores all HP at the cost of reducing
+              maximum HP.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish for eventual greatness.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Halves Max HP, FP, and Stamina until the end of the day.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to expand my intellect.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Increases Intelligence at the cost of other stats.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have great dexterity.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Increases Dexterity at the cost of other stats.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have great strength.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Increases Strength at the cost of other stats.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have deep faith.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Increases Faith at the cost of other stats.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I desire a powerful weapon.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gives the Nightfarer an Epic-tier weapon at the cost of 2
+              levels.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2">I want to gain many levels.</td>
+            <td class="px-2 py-2">Gain levels but lose a level each time you use a flask.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+
+  <p class="text-gray-400 text-xs mt-4">This site is for my personal use and is not affiliated with any game or
+    company.
+    All characters, names, and related items are copyrighted by their respective owners. I can't guarantee the
+    accuracy
     of any of the data.</p>
   </p>
 
