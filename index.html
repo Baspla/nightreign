@@ -6,7 +6,7 @@
   <title>Tims Nightreign Helper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script defer data-domain="baspla.github.io/nightreign" src="https://services.timmorgner.de/js/script.tagged-events.js"></script>
 </head>
 
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center py-8 gap-4">
@@ -29,11 +29,11 @@
     <!-- Control Buttons -->
     <div class="flex gap-2 mb-2">
       <button id="startBtn"
-        class="bg-purple-500 hover:bg-purple-600 text-gray-900 font-bold py-2 px-6 rounded focus:outline-none transition">
+        class="bg-purple-500 hover:bg-purple-600 text-gray-900 font-bold py-2 px-6 rounded focus:outline-none transition plausible-event-name=Timer+Start">
         Start
       </button>
       <button id="resetBtn"
-        class="bg-gray-600 hover:bg-gray-700 text-gray-200 font-bold py-2 px-4 rounded focus:outline-none transition">
+        class="bg-gray-600 hover:bg-gray-700 text-gray-200 font-bold py-2 px-4 rounded focus:outline-none transition plausible-event-name=Timer+Reset">
         Reset
       </button>
     </div>
@@ -41,21 +41,21 @@
     <!-- Phase Jump Buttons -->
     <div class="flex gap-2 mt-2">
       <button
-        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+1"
         data-phase="0">1</button>
       <button
-        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+2"
         data-phase="1">2</button>
       <button
-        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+3"
         data-phase="2">3</button>
       <button
-        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition"
+        class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+4"
         data-phase="3">4</button>
     </div>
   </div>
 
-  <details open class="w-full max-w-6xl">
+  <details open class="w-full max-w-6xl plausible-event-name=Collapsible+Boss+Weaknesses">
 
     <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Boss Weaknesses</summary>
     <div class="overflow-x-auto">
@@ -268,7 +268,8 @@
       status effects.
     </p>
   </details>
-  <details class="w-full max-w-6xl">
+
+  <details class="w-full max-w-6xl plausible-event-name=Collapsible+Character+Stats">
     <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Character Stats</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
@@ -401,7 +402,7 @@
     </div>
   </details>
 
-  <details class="w-full max-w-6xl">
+  <details class="w-full max-w-6xl plausible-event-name=Collapsible+Magic+Cocktail">
     <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Magic Cocktail</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
@@ -516,7 +517,7 @@
     </div>
   </details>
 
-  <details class="w-full max-w-6xl">
+  <details class="w-full max-w-6xl plausible-event-name=Collapsible+Level+Rune+Requirements">
     <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Level Rune Requirements</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
@@ -593,7 +594,7 @@
     <p class="text-gray-400 text-xs mt-4">Total runes required to reach level 15: 513,116</p>
   </details>
 
-  <details class="w-full max-w-6xl">
+  <details class="w-full max-w-6xl plausible-event-name=Collapsible+Libra+Deals">
     <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Libra Deals</summary>
     <div class="overflow-x-auto">
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
