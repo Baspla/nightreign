@@ -8,6 +8,7 @@
   <script defer data-domain="baspla.github.io/nightreign"
     src="https://services.timmorgner.de/js/script.hash.tagged-events.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!--This page is by @Baspla-->
 </head>
 
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col items-center py-8 gap-4 px-4">
@@ -702,9 +703,14 @@
     <p class="text-gray-400 text-xs mt-4">Total runes required to reach level 15: 513,116</p>
   </details>
 
-  <details class="w-full max-w-6xl plausible-event-name=Collapsible+Libra+Deals">
-    <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">Libra Deals</summary>
-    <div class="overflow-x-auto">
+ <details class="w-full max-w-6xl plausible-event-name=Collapsible+Combined+Deals">
+  <summary class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2">
+    Libra &amp; Scale-bearing Merchant Deals
+  </summary>
+  <div class="flex flex-row w-full gap-4">
+    <!-- Libra Deals (Boss) -->
+    <div class="w-1/2 overflow-x-auto">
+      <h3 class="text-lg font-semibold mb-2 text-purple-300">Libra Deals (Boss)</h3>
       <table class="min-w-full rounded-lg overflow-hidden text-xs">
         <thead>
           <tr class="bg-gray-800 text-gray-200">
@@ -713,57 +719,119 @@
           </tr>
         </thead>
         <tbody>
+          <!-- Libra Deals rows go here -->
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">I wish to have deep faith.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Respec: Overhauls your stats, making Faith your highest
-              attribute. Variants exist for Strength, Dexterity, Intelligence, Arcane.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Respec: Overhauls your stats, making Faith your highest attribute. Variants exist for Strength, Dexterity, Intelligence, Arcane.</td>
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">I desire a flask.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Gain 1 additional flask, but lose 10% of your maximum HP
-              permanently.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain 1 additional flask, but lose 10% of your maximum HP permanently.</td>
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">I want the power of a demon.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Gain a passive Frenzied Eye that shoots frenzy projectiles
-              over time. Also causes Madness buildup on yourself.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain a passive Frenzied Eye that shoots frenzy projectiles over time. Also causes Madness buildup on yourself.</td>
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">I desire a powerful weapon.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Receive a random weapon from a special list, but lose 2
-              levels. Possible weapons include: Vyke’s War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal,
-              Fingerprint Stone Shield, Miquellan’s Knight Sword, Ordovis’s Greatsword, Halo Scythe.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Receive a random weapon from a special list, but lose 2 levels. Possible weapons include: Vyke’s War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan’s Knight Sword, Ordovis’s Greatsword, Halo Scythe.</td>
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">I want to gain many levels.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Gain +2 levels, but lose 1 level every time you use a flask
-              thereafter.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain +2 levels, but lose 1 level every time you use a flask thereafter.</td>
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">I wish for eventual greatness.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Suffer -30% HP, FP, and stamina for 2 minutes, then gain +20%
-              to all three permanently after.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Suffer -30% HP, FP, and stamina for 2 minutes, then gain +20% to all three permanently after.</td>
           </tr>
           <tr class="bg-gray-700">
             <td class="px-2 py-2 border-b border-gray-700">I want to fight at utmost strength.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Libra gains 10% defense for 100s. You gain +25% HP and +10%
-              damage for 60s. Libra starts fight in golden form.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Libra gains 10% defense for 100s. You gain +25% HP and +10% damage for 60s. Libra starts fight in golden form.</td>
           </tr>
           <tr class="bg-gray-800">
             <td class="px-2 py-2 border-b border-gray-700">I want resistance to ailments.</td>
-            <td class="px-2 py-2 border-b border-gray-700">Gain +150 resistance to all status effects, but lose 10% max
-              stamina.</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain +150 resistance to all status effects, but lose 10% max stamina.</td>
           </tr>
           <tr class="bg-gray-700">
-            <td class="px-2 py-2 border-b border-gray-700">I want to hold death at bay.</td>
-            <td class="px-2 py-2 border-b border-gray-700">When HP drops to 20%, automatically heal to 100%. However,
-              you permanently lose 20% max HP.</td>
+            <td class="px-2 py-2">I want to hold death at bay.</td>
+            <td class="px-2 py-2">When HP drops to 20%, automatically heal to 100%. However, you permanently lose 20% max HP.</td>
           </tr>
         </tbody>
       </table>
     </div>
-  </details>
-
+    <!-- Scale-bearing Merchant Deals (Overworld) -->
+    <div class="w-1/2 overflow-x-auto">
+      <h3 class="text-lg font-semibold mb-2 text-purple-300">Scale-bearing Merchant Deals (Overworld)</h3>
+      <table class="min-w-full rounded-lg overflow-hidden text-xs">
+        <thead>
+          <tr class="bg-gray-800 text-gray-200">
+            <th class="px-2 py-2 border-b border-gray-700">Deal</th>
+            <th class="px-2 py-2 border-b border-gray-700">Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Merchant Deals rows go here -->
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have great strength</td>
+            <td class="px-2 py-2 border-b border-gray-700">Raises Strength but reduces all other stats</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have great dexterity</td>
+            <td class="px-2 py-2 border-b border-gray-700">Raises Dexterity but reduces all other stats</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to expand my intellect</td>
+            <td class="px-2 py-2 border-b border-gray-700">Raises Intelligence but reduces all other stats</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to have deep faith</td>
+            <td class="px-2 py-2 border-b border-gray-700">Raises Faith but reduces all other stats</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I wish to be in touch with the arcane</td>
+            <td class="px-2 py-2 border-b border-gray-700">Raises Arcane but reduces all other stats</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I want resistance to ailments</td>
+            <td class="px-2 py-2 border-b border-gray-700">Increases Resistances by +150, but lose 10% Stamina</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I want to hold death at bay</td>
+            <td class="px-2 py-2 border-b border-gray-700">Lose 20% max HP. Once per battle, when HP drops to or below 20%, immediately heal back to full HP.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish for more agility</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain Stamina in exchange for HP and FP</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I want a high level</td>
+            <td class="px-2 py-2 border-b border-gray-700">Gain 3 levels but lose a level every time you drink from your flask</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I desire a flask</td>
+            <td class="px-2 py-2 border-b border-gray-700">Adds a Flask Charge but lose 10% max HP</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I desire a powerful weapon</td>
+            <td class="px-2 py-2 border-b border-gray-700">Lose 2 levels but randomly get one of the following Weapons: Vyke's War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan Knight's Sword, Ordovis's Greatsword, Halo Scythe. Passive effects are randomly determined.</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2 border-b border-gray-700">I wish for eventual greatness</td>
+            <td class="px-2 py-2 border-b border-gray-700">Take a -30% HP, FP, and Stamina debuff that lasts for the rest of the day. After that debuff expires at the start of the next day, gain a +20% HP, FP, and Stamina buff permanently. If you die before any of that happens, all aspects of this deal are cancelled.</td>
+          </tr>
+          <tr class="bg-gray-700">
+            <td class="px-2 py-2 border-b border-gray-700">I want the power of a demon</td>
+            <td class="px-2 py-2 border-b border-gray-700">Grants an demonic eye that shoots enemies, which builds up Madness when used</td>
+          </tr>
+          <tr class="bg-gray-800">
+            <td class="px-2 py-2">I want a lot of runes</td>
+            <td class="px-2 py-2">For the cost of 10,000 Runes, places the Symbol of Avarice in a vacant talisman slot. Available only during days 1 and 2.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</details>
 
   <p class="text-gray-400 text-xs mt-4">This site is for my personal use and is not affiliated with any game or
     company.
