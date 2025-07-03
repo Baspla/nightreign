@@ -7,6 +7,8 @@ html(lang="en")
         title Tims Nightreign Helper
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         script(defer, data-domain="baspla.github.io/nightreign", src="https://services.timmorgner.de/js/script.hash.tagged-events.js")
+        script.
+            window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
         script(src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4")
         // This page is by @Baspla
     body.bg-gray-900.text-gray-100.min-h-screen.flex.flex-col.items-center.py-8.gap-4.px-4
@@ -16,7 +18,7 @@ html(lang="en")
                 div https://baspla.github.io/nightreign/
                 button#shareBtn(class="ml-2 px-2 rounded-lg bg-green-900 text-white cursor-pointer hidden plausible-event-name=Share+Button") Share this page
         div(class="w-full flex flex-row justify-center gap-8 max-w-6xl flex-wrap lg:flex-nowrap")
-            div(class="bg-gray-800 rounded-xl shadow-lg p-6  w-full flex flex-col items-center lg:max-w-sm max-w-full")
+            div(class="bg-gray-800 rounded-xl shadow-lg p-6 px-8 w-full flex flex-col items-center lg:max-w-sm max-w-full")
                 h1.text-2xl.font-bold.text-purple-300.mb-4 Nightreign Timer
                 div#phase.text-xl.text-white.mb-2 Roundtable
                 div#time.text-4xl.font-mono.text-purple-200.mb-4 04:25
@@ -46,7 +48,7 @@ html(lang="en")
                 div.h-full.flex.flex-col.border-dashed.border-gray-700.border-2.rounded-xl.transition#drop-target
                     div.p-4.flex.flex-col.items-center.justify-center.h-full#drop-empty-indicator
                         p.text-gray-400.text-sm.text-center
-                            | Just drag the Boss here
+                            | Just drag the boss here
                     div.flex.flex-col.gap-2.hidden#pinned-stats
 
 
@@ -86,7 +88,7 @@ html(lang="en")
                                 img(src="frenzy.webp", alt="Madness", class="inline-block w-5 h-5 align-middle")
                     tbody
                         each item, index in data.boss_weaknesses
-                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800") + " boss-row", draggable="true", data-boss-name=item.boss)
+                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800") + " boss-row ", draggable="true", data-boss-name=item.boss)
                                 // Pin Button
                                 td.px-2.py-2.text-center
                                     button(

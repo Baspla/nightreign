@@ -242,6 +242,11 @@ document.addEventListener("DOMContentLoaded", () => {
     displayPinnedStat(pinnedStatElement);
 
     console.log(`Pinned stats for: ${bossName}`);
+    plausible('Pinned Boss', {
+      props: {
+        bossName: bossName,
+      }
+    })
   }
 
 });
