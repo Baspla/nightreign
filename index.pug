@@ -1,0 +1,265 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title Tims Nightreign Helper
+        meta(charset="UTF-8")
+        title Tims Nightreign Helper
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(defer, data-domain="baspla.github.io/nightreign", src="https://services.timmorgner.de/js/script.hash.tagged-events.js")
+        script(src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4")
+        // This page is by @Baspla
+    body.bg-gray-900.text-gray-100.min-h-screen.flex.flex-col.items-center.py-8.gap-4.px-4
+        div.mb-2
+            h1.text-3xl.font-bold.text-center.mb-2 Tims Nightreign Helper
+            div.text-lg.text-gray-400.text-center.flex-row.flex.justify-center
+                div https://baspla.github.io/nightreign/
+                button#shareBtn(class="ml-2 px-2 rounded-lg bg-green-900 text-white cursor-pointer hidden plausible-event-name=Share+Button") Share this page
+        div(class="w-full flex flex-row justify-center gap-8 max-w-6xl flex-wrap lg:flex-nowrap")
+            div(class="bg-gray-800 rounded-xl shadow-lg p-6  w-full flex flex-col items-center lg:max-w-sm max-w-full")
+                h1.text-2xl.font-bold.text-purple-300.mb-4 Nightreign Timer
+                div#phase.text-xl.text-white.mb-2 Roundtable
+                div#time.text-4xl.font-mono.text-purple-200.mb-4 04:25
+
+                // Progress Bar with 4 Segments
+                div(class="relative w-full h-4 bg-gray-700 rounded mb-6 flex items-center")
+                    // Dynamic Dividers
+                    div#phase-dividers(class="absolute top-0 left-0 w-full h-full pointer-events-none")
+                    // Progress Indicator
+                    div#progress-indicator(class="absolute top-0 h-4 bg-purple-400 rounded transition-all duration-300", style="width: 8px; left: 0")
+
+                // Control Buttons
+                div.flex.gap-2.mb-2
+                    button#startBtn(class="bg-purple-500 hover:bg-purple-600 text-gray-900 font-bold py-2 px-6 rounded focus:outline-none transition plausible-event-name=Timer+Start") Start
+                    button#resetBtn(class="bg-gray-600 hover:bg-gray-700 text-gray-200 font-bold py-2 px-4 rounded focus:outline-none transition plausible-event-name=Timer+Reset") Reset
+
+                // Phase Jump Buttons
+                div.flex.gap-2.mt-2
+                    button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+1", data-phase="0") 1
+                    button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+2", data-phase="1") 2
+                    button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+3", data-phase="2") 3
+                    button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+4", data-phase="3") 4
+            div(class="bg-gray-800 rounded-xl shadow-lg p-6  w-full flex flex-col lg:max-w-xl max-w-full")
+                div.flex.flex-row.justify-between.items-center.mb-4
+                    h1.text-2xl.font-bold.text-purple-300.flex-shrink-0 Pinned Boss
+                    p.text-gray-400.text-sm Here you can pin the boss you are currently fighting.
+                div.h-full.flex.flex-col.border-dashed.border-gray-700.border-2.rounded-xl.transition#drop-target
+                    div.p-4.flex.flex-col.items-center.justify-center.h-full#drop-empty-indicator
+                        p.text-gray-400.text-sm.text-center
+                            | Just drag the Boss here
+                    div.flex.flex-col.gap-2.hidden#pinned-stats
+
+
+        details(open class="w-full max-w-6xl plausible-event-name=Collapsible+Boss+Weaknesses")
+            summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg font-semibold") Boss Weaknesses
+            div.overflow-x-auto
+                table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                    thead
+                        tr.bg-gray-800.text-gray-200
+                            th.px-2.py-2.border-b.border-gray-700
+                            th.px-2.py-2.border-b.border-gray-700 Boss
+                            th.px-2.py-2.border-b.border-gray-700 Weakness
+                            th.px-2.py-2.border-b.border-gray-700 Dealt Damage
+                            th.px-2.py-2.border-b.border-gray-700 Standard
+                            th.px-2.py-2.border-b.border-gray-700 Slash
+                            th.px-2.py-2.border-b.border-gray-700 Strike
+                            th.px-2.py-2.border-b.border-gray-700 Pierce
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="magic.webp", alt="Magic", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="fire.webp", alt="Fire", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="lightning.webp", alt="Lightning", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="holy.webp", alt="Holy", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="bleed.webp", alt="Bleed", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="frostbite.webp", alt="Frostbite", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="poison.webp", alt="Poison", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="rot.webp", alt="Scarlet Rot", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="sleep.webp", alt="Sleep", class="inline-block w-5 h-5 align-middle")
+                            th.px-2.py-2.border-b.border-gray-700
+                                img(src="frenzy.webp", alt="Madness", class="inline-block w-5 h-5 align-middle")
+                    tbody
+                        each item, index in data.boss_weaknesses
+                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800") + " boss-row", draggable="true", data-boss-name=item.boss)
+                                // Pin Button
+                                td.px-2.py-2.text-center
+                                    button(
+                                        class="pin-btn text-gray-200 font-bold py-0.5 px-1 rounded focus:outline-none transition cursor-pointer"
+                                        data-boss-name=item.boss
+                                        style="font-size:0.85rem"
+                                    )
+                                        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor' class='size-4')
+                                            path(fill-rule='evenodd' d='M18.97 3.659a2.25 2.25 0 0 0-3.182 0l-10.94 10.94a3.75 3.75 0 1 0 5.304 5.303l7.693-7.693a.75.75 0 0 1 1.06 1.06l-7.693 7.693a5.25 5.25 0 1 1-7.424-7.424l10.939-10.94a3.75 3.75 0 1 1 5.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 0 1 5.91 15.66l7.81-7.81a.75.75 0 0 1 1.061 1.06l-7.81 7.81a.75.75 0 0 0 1.054 1.068L18.97 6.84a2.25 2.25 0 0 0 0-3.182Z' clip-rule='evenodd')
+                                td.px-2.py-2= item.boss
+                                td.px-2.py-2.text-center
+                                    each type in item.weakness.split('#').filter(Boolean)
+                                        img(src=type + '.webp', alt=type.replace(/^[a-z]/, (m) => m.toUpperCase()), class="inline-block w-5 h-5 align-middle")
+                                td.px-2.py-2.text-center
+                                    -
+                                        const dealtTypes = item.dealt_damage.split('#').filter(Boolean);
+                                    each type, i in dealtTypes
+                                        img(src=type + '.webp', alt=type.replace(/^[a-z]/, (m) => m.toUpperCase()), class="inline-block w-5 h-5 align-middle")
+                                        // Limit to 5 icons
+                                        if dealtTypes.length > 5 && i === 4
+                                            br
+                                -
+                                    const getPercentClass = (val) => {
+                                        if (val === '+0%') return '';
+                                        const num = parseInt(val.replace('%', ''));
+                                        if (num >= 25 && val.includes('+')) return 'text-green-500 font-bold';
+                                        if (num >= 10 && val.includes('+')) return 'text-green-300';
+                                        if (num <= -30) return 'text-red-500';
+                                        if (num <= -10) return 'text-red-300';
+                                        return '';
+                                    };
+                                    const getStatusClass = (val) => {
+                                        if (val === '154') return 'text-green-500';
+                                        if (val === '252') return 'text-yellow-500';
+                                        if (val === '541') return 'text-orange-500';
+                                        if (val === 'Immune') return 'text-red-500';
+                                        return '';
+                                    };
+
+                                td(class="px-2 py-2 " + getPercentClass(item.standard))= item.standard
+                                td(class="px-2 py-2 " + getPercentClass(item.slash))= item.slash
+                                td(class="px-2 py-2 " + getPercentClass(item.strike))= item.strike
+                                td(class="px-2 py-2 " + getPercentClass(item.pierce))= item.pierce
+                                td(class="px-2 py-2 " + getPercentClass(item.magic))= item.magic
+                                td(class="px-2 py-2 " + getPercentClass(item.fire))= item.fire
+                                td(class="px-2 py-2 " + getPercentClass(item.lightning))= item.lightning
+                                td(class="px-2 py-2 " + getPercentClass(item.holy))= item.holy
+                                td(class="px-2 py-2 " + getStatusClass(item.bleed))= item.bleed
+                                td(class="px-2 py-2 " + getStatusClass(item.frostbite))= item.frostbite
+                                td(class="px-2 py-2 " + getStatusClass(item.poison))= item.poison
+                                td(class="px-2 py-2 " + getStatusClass(item.rot))= item.rot
+                                td(class="px-2 py-2 " + getStatusClass(item.sleep))= item.sleep
+                                td(class="px-2 py-2 " + getStatusClass(item.frenzy))= item.frenzy
+                p.text-gray-400.text-xs.mt-4
+                    | Percent: Bonus/Reduction in damage. Higher numbers = Less susceptible to status
+                    | effects. The resistance numbers are the buildup amount to trigger it. "Dealing Damage" is the type of damage the
+                    | Boss deals to you.
+
+        details(class="w-full max-w-6xl plausible-event-name=Collapsible+Character+Stats")
+            summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg font-semibold") Character Stats
+            div.overflow-x-auto
+                table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                    thead
+                        tr.bg-gray-800.text-gray-200
+                            th.px-2.py-2.border-b.border-gray-700 Character
+                            th.px-2.py-2.border-b.border-gray-700 HP
+                            th.px-2.py-2.border-b.border-gray-700 FP
+                            th.px-2.py-2.border-b.border-gray-700 Stamina
+                            th.px-2.py-2.border-b.border-gray-700 Strength
+                            th.px-2.py-2.border-b.border-gray-700 Dexterity
+                            th.px-2.py-2.border-b.border-gray-700 Intelligence
+                            th.px-2.py-2.border-b.border-gray-700 Faith
+                            th.px-2.py-2.border-b.border-gray-700 Arcane
+                            th.px-2.py-2.border-b.border-gray-700 Special moveset
+                            th.px-2.py-2.border-b.border-gray-700 My recommended weapon classes
+                    tbody
+                        each item, index in data.character_stats
+                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
+                                -
+                                    const getGradeClass = (grade) => {
+                                        if (grade === 'S') return 'text-yellow-400';
+                                        if (grade === 'A' || grade === 'B') return 'text-green-400';
+                                        return 'text-gray-400'; // C, D and others
+                                    };
+                                td.px-2.py-2.border-b.border-gray-700= item.character
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.hp))= item.hp
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.fp))= item.fp
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.stamina))= item.stamina
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.strength))= item.strength
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.dexterity))= item.dexterity
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.intelligence))= item.intelligence
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.faith))= item.faith
+                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.arcane))= item.arcane
+                                td(class="px-2 py-2 border-b border-gray-700", title=item.raider_bonus ? item.raider_bonus : null)= item.moveset
+                                td.px-2.py-2.border-b.border-gray-700= item.recommended
+
+        details(class="w-full max-w-6xl plausible-event-name=Collapsible+Magic+Cocktail")
+            summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg  font-semibold") Magic Cocktail
+            div.overflow-x-auto
+                table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                    thead
+                        tr.bg-gray-800.text-gray-200
+                            th(colspan="6", class="px-2 py-2 border-b border-gray-700 text-center") Elements
+                            th.px-2.py-2.border-b.border-gray-700 Name
+                            th.px-2.py-2.border-b.border-gray-700 Effect
+                    tbody
+                        each item, index in data.magic_cocktail
+                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
+                                -
+                                    const elements = item.elements.split('#').filter(Boolean);
+                                    const tdColspan = 6 / elements.length;
+                                each element in elements
+                                    td(colspan=tdColspan, class="px-2 py-2 border-b border-gray-700 text-center")
+                                        img(src=element + '.webp', alt=element.replace(/^[a-z]/, (m) => m.toUpperCase()), class="inline-block w-5 h-5 align-middle")
+                                td.px-2.py-2.border-b.border-gray-700= item.name
+                                td.px-2.py-2.border-b.border-gray-700= item.effect
+
+        details(class="w-full max-w-6xl plausible-event-name=Collapsible+Level+Rune+Requirements")
+            summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg  font-semibold") Level Rune Requirements
+            div.overflow-x-auto
+                table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                    thead
+                        tr.bg-gray-800.text-gray-200
+                            th.px-2.py-2.border-b.border-gray-700 Level
+                            th.px-2.py-2.border-b.border-gray-700 Runes required
+                            th.px-2.py-2.border-b.border-gray-700 Runes needed to reach 15
+                    tbody
+                        each item, index in data.level_rune_requirements
+                            tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
+                                td.px-2.py-2.border-b.border-gray-700= item.level
+                                td.px-2.py-2.border-b.border-gray-700= item.runes.toLocaleString()
+                                td.px-2.py-2.border-b.border-gray-700= item.needed_to_15.toLocaleString()
+                p.text-gray-400.text-xs.mt-4 Total runes required to reach level 15: 513,116
+
+        details(class="w-full max-w-6xl plausible-event-name=Collapsible+Combined+Deals")
+            summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg font-semibold") Libra &amp; Scale-bearing Merchant Deals
+            div(class="flex flex-row w-full gap-4")
+                // Libra Deals (Boss)
+                div(class="w-1/2 overflow-x-auto")
+                    h3.text-lg.font-semibold.mb-2.text-purple-300 Libra Deals (Boss)
+                    table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                        thead
+                            tr.bg-gray-800.text-gray-200
+                                th.px-2.py-2.border-b.border-gray-700 Deal
+                                th.px-2.py-2.border-b.border-gray-700 Effect
+                        tbody
+                            // Loop through libra_deals data
+                            each item, index in data.libra_deals
+                                tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
+                                    td.px-2.py-2.border-b.border-gray-700= item.deal
+                                    td.px-2.py-2.border-b.border-gray-700= item.effect
+                // Scale-bearing Merchant Deals (Overworld)
+                div(class="w-1/2 overflow-x-auto")
+                    h3.text-lg.font-semibold.mb-2.text-purple-300 Scale-bearing Merchant Deals (Overworld)
+                    table.min-w-full.rounded-lg.overflow-hidden.text-xs
+                        thead
+                            tr.bg-gray-800.text-gray-200
+                                th.px-2.py-2.border-b.border-gray-700 Deal
+                                th.px-2.py-2.border-b.border-gray-700 Effect
+                        tbody
+                            // Loop through merchant_deals data
+                            each item, index in data.merchant_deals
+                                tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
+                                    td.px-2.py-2.border-b.border-gray-700= item.deal
+                                    td.px-2.py-2.border-b.border-gray-700= item.effect
+
+        p.text-gray-400.text-xs.mt-4
+            | This site is for my personal use and is not affiliated with any game or company.
+            | All characters, names, and related items are copyrighted by their respective owners. I can't guarantee the accuracy
+            | of any of the data.
+
+        script.
+            const data = !{JSON.stringify(data)};
+        script(src="timer.js")
+        script(src="share.js")
+        script(src="pin.js")

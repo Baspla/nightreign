@@ -1,545 +1,562 @@
 {
-  "boss_weaknesses": [
-    {
-      "Boss": "Gladius",
-      "Weakness": "Holy",
-      "Dealt Damage": "Fire",
-      "Standard": "+0%",
-      "Slash": "+0%",
-      "Strike": "+0%",
-      "Pierce": "+10%",
-      "Magic": "+0%",
-      "Fire": "-50%",
-      "Lightning": "+0%",
-      "Holy": "+35%",
-      "Bleed": "252",
-      "Frostbite": "541",
-      "Poison": "541",
-      "Rot": "252",
-      "Sleep": "154",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Adel",
-      "Weakness": "Poison",
-      "Dealt Damage": "Lightning, Bleed, Poison",
-      "Standard": "+0%",
-      "Slash": "+0%",
-      "Strike": "+0%",
-      "Pierce": "+0%",
-      "Magic": "+0%",
-      "Fire": "-20%",
-      "Lightning": "-50%",
-      "Holy": "+0%",
-      "Bleed": "541",
-      "Frostbite": "154",
-      "Poison": "154",
-      "Rot": "154",
-      "Sleep": "154",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Gnoster (Moth)",
-      "Weakness": "Fire",
-      "Dealt Damage": "Magic, Poison",
-      "Standard": "+15%",
-      "Slash": "+25%",
-      "Strike": "+15%",
-      "Pierce": "+25%",
-      "Magic": "-50%",
-      "Fire": "+40%",
-      "Lightning": "-10%",
-      "Holy": "-10%",
-      "Bleed": "154",
-      "Frostbite": "541",
-      "Poison": "541",
-      "Rot": "154",
-      "Sleep": "154",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Gnoster (Scorpion)",
-      "Weakness": "Fire",
-      "Dealt Damage": "Magic",
-      "Standard": "-10%",
-      "Slash": "-20%",
-      "Strike": "+20%",
-      "Pierce": "+10%",
-      "Magic": "-10%",
-      "Fire": "+35%",
-      "Lightning": "-10%",
-      "Holy": "-10%",
-      "Bleed": "154",
-      "Frostbite": "154",
-      "Poison": "252",
-      "Rot": "154",
-      "Sleep": "154",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Maris",
-      "Weakness": "Lightning",
-      "Dealt Damage": "Magic, Sleep",
-      "Standard": "+0%",
-      "Slash": "+15%",
-      "Strike": "-20%",
-      "Pierce": "-10%",
-      "Magic": "-20%",
-      "Fire": "-50%",
-      "Lightning": "+40%",
-      "Holy": "-15%",
-      "Bleed": "Immune",
-      "Frostbite": "252",
-      "Poison": "Immune",
-      "Rot": "252",
-      "Sleep": "Immune",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Libra",
-      "Weakness": "Madness",
-      "Dealt Damage": "Holy, Madness",
-      "Standard": "+0%",
-      "Slash": "+10%",
-      "Strike": "+0%",
-      "Pierce": "+0%",
-      "Magic": "-20%",
-      "Fire": "+20%",
-      "Lightning": "+0%",
-      "Holy": "+35%",
-      "Bleed": "252",
-      "Frostbite": "252",
-      "Poison": "154",
-      "Rot": "154",
-      "Sleep": "Immune",
-      "Frenzy": "154"
-    },
-    {
-      "Boss": "Fulghor",
-      "Weakness": "Lightning",
-      "Dealt Damage": "Holy",
-      "Standard": "+0%",
-      "Slash": "+0%",
-      "Strike": "+0%",
-      "Pierce": "+0%",
-      "Magic": "+0%",
-      "Fire": "+0%",
-      "Lightning": "+20%",
-      "Holy": "-30%",
-      "Bleed": "154",
-      "Frostbite": "154",
-      "Poison": "154",
-      "Rot": "154",
-      "Sleep": "154",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Caligo",
-      "Weakness": "Fire",
-      "Dealt Damage": "Magic, Frostbite",
-      "Standard": "+0%",
-      "Slash": "-15%",
-      "Strike": "+15%",
-      "Pierce": "-10%",
-      "Magic": "-20%",
-      "Fire": "+35%",
-      "Lightning": "-20%",
-      "Holy": "-20%",
-      "Bleed": "252",
-      "Frostbite": "541",
-      "Poison": "252",
-      "Rot": "252",
-      "Sleep": "541",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "The Shape Of Night",
-      "Weakness": "Holy",
-      "Dealt Damage": null,
-      "Standard": "+0%",
-      "Slash": "+15%",
-      "Strike": "-10%",
-      "Pierce": "+10%",
-      "Magic": "+0%",
-      "Fire": "+20%",
-      "Lightning": "+0%",
-      "Holy": "+35%",
-      "Bleed": "Immune",
-      "Frostbite": "Immune",
-      "Poison": "Immune",
-      "Rot": "252",
-      "Sleep": "541",
-      "Frenzy": "Immune"
-    },
-    {
-      "Boss": "Heolstor",
-      "Weakness": "Holy",
-      "Dealt Damage": "Magic, Fire, Holy, Lightning, Madness, Sleep, Deathblight, Bloodloss, Poison, Scarlet Rot",
-      "Standard": "+0%",
-      "Slash": "-10%",
-      "Strike": "+10%",
-      "Pierce": "+15%",
-      "Magic": "+0%",
-      "Fire": "+0%",
-      "Lightning": "+20%",
-      "Holy": "+20%",
-      "Bleed": "Immune",
-      "Frostbite": "Immune",
-      "Poison": "Immune",
-      "Rot": "252",
-      "Sleep": "541",
-      "Frenzy": "Immune"
+    "data": {
+        "boss_weaknesses": [
+            {
+                "boss": "Gladius",
+                "weakness": "#holy",
+                "dealt_damage": "#fire",
+                "standard": "+0%",
+                "slash": "+0%",
+                "strike": "+0%",
+                "pierce": "+10%",
+                "magic": "+0%",
+                "fire": "-50%",
+                "lightning": "+0%",
+                "holy": "+35%",
+                "bleed": "252",
+                "frostbite": "541",
+                "poison": "541",
+                "rot": "252",
+                "sleep": "154",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Adel",
+                "weakness": "#poison",
+                "dealt_damage": "#lightning#bleed#poison",
+                "standard": "+0%",
+                "slash": "+0%",
+                "strike": "+0%",
+                "pierce": "+0%",
+                "magic": "+0%",
+                "fire": "-20%",
+                "lightning": "-50%",
+                "holy": "+0%",
+                "bleed": "541",
+                "frostbite": "154",
+                "poison": "154",
+                "rot": "154",
+                "sleep": "154",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Gnoster (Moth)",
+                "weakness": "#fire",
+                "dealt_damage": "#magic#poison",
+                "standard": "+15%",
+                "slash": "+25%",
+                "strike": "+15%",
+                "pierce": "+25%",
+                "magic": "-50%",
+                "fire": "+40%",
+                "lightning": "-10%",
+                "holy": "-10%",
+                "bleed": "154",
+                "frostbite": "541",
+                "poison": "541",
+                "rot": "154",
+                "sleep": "154",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Gnoster (Scorpion)",
+                "weakness": "#fire",
+                "dealt_damage": "#magic",
+                "standard": "-10%",
+                "slash": "-20%",
+                "strike": "+20%",
+                "pierce": "+10%",
+                "magic": "-10%",
+                "fire": "+35%",
+                "lightning": "-10%",
+                "holy": "-10%",
+                "bleed": "154",
+                "frostbite": "154",
+                "poison": "252",
+                "rot": "154",
+                "sleep": "154",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Maris",
+                "weakness": "#lightning",
+                "dealt_damage": "#magic#sleep",
+                "standard": "+0%",
+                "slash": "+15%",
+                "strike": "-20%",
+                "pierce": "-10%",
+                "magic": "-20%",
+                "fire": "-50%",
+                "lightning": "+40%",
+                "holy": "-15%",
+                "bleed": "Immune",
+                "frostbite": "252",
+                "poison": "Immune",
+                "rot": "252",
+                "sleep": "Immune",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Libra",
+                "weakness": "#frenzy",
+                "dealt_damage": "#holy#frenzy",
+                "standard": "+0%",
+                "slash": "+10%",
+                "strike": "+0%",
+                "pierce": "+0%",
+                "magic": "-20%",
+                "fire": "+20%",
+                "lightning": "+0%",
+                "holy": "+35%",
+                "bleed": "252",
+                "frostbite": "252",
+                "poison": "154",
+                "rot": "154",
+                "sleep": "Immune",
+                "frenzy": "154"
+            },
+            {
+                "boss": "Fulghor",
+                "weakness": "#lightning",
+                "dealt_damage": "#holy",
+                "standard": "+0%",
+                "slash": "+0%",
+                "strike": "+0%",
+                "pierce": "+0%",
+                "magic": "+0%",
+                "fire": "+0%",
+                "lightning": "+20%",
+                "holy": "-30%",
+                "bleed": "154",
+                "frostbite": "154",
+                "poison": "154",
+                "rot": "154",
+                "sleep": "154",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Caligo",
+                "weakness": "#fire",
+                "dealt_damage": "#magic#frostbite",
+                "standard": "+0%",
+                "slash": "-15%",
+                "strike": "+15%",
+                "pierce": "-10%",
+                "magic": "-20%",
+                "fire": "+35%",
+                "lightning": "-20%",
+                "holy": "-20%",
+                "bleed": "252",
+                "frostbite": "541",
+                "poison": "252",
+                "rot": "252",
+                "sleep": "541",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "The Shape Of Night",
+                "weakness": "#holy",
+                "dealt_damage": "",
+                "standard": "+0%",
+                "slash": "+15%",
+                "strike": "-10%",
+                "pierce": "+10%",
+                "magic": "+0%",
+                "fire": "+20%",
+                "lightning": "+0%",
+                "holy": "+35%",
+                "bleed": "Immune",
+                "frostbite": "Immune",
+                "poison": "Immune",
+                "rot": "252",
+                "sleep": "541",
+                "frenzy": "Immune"
+            },
+            {
+                "boss": "Heolstor",
+                "weakness": "#holy",
+                "dealt_damage": "#magic#fire#holy#lightning#frenzy#sleep#deathblight#bleed#poison#rot",
+                "standard": "+0%",
+                "slash": "-10%",
+                "strike": "+10%",
+                "pierce": "+15%",
+                "magic": "+0%",
+                "fire": "+0%",
+                "lightning": "+20%",
+                "holy": "+20%",
+                "bleed": "Immune",
+                "frostbite": "Immune",
+                "poison": "Immune",
+                "rot": "252",
+                "sleep": "541",
+                "frenzy": "Immune"
+            }
+        ],
+        "character_stats": [
+            {
+                "character": "Wylder",
+                "hp": "A",
+                "fp": "C",
+                "stamina": "B",
+                "strength": "A",
+                "dexterity": "B",
+                "intelligence": "C",
+                "faith": "C",
+                "arcane": "C",
+                "moveset": "Greatsword",
+                "recommended": "Greatswords, Straight Swords, Flails, Colossal Weapons, Greataxes, Hammers"
+            },
+            {
+                "character": "Guardian",
+                "hp": "S",
+                "fp": "C",
+                "stamina": "A",
+                "strength": "B",
+                "dexterity": "C",
+                "intelligence": "D",
+                "faith": "C",
+                "arcane": "C",
+                "moveset": "Halberd",
+                "recommended": "Halberds, Axes, Great Spears, Thrusting Swords"
+            },
+            {
+                "character": "Duchess",
+                "hp": "C",
+                "fp": "B",
+                "stamina": "D",
+                "strength": "D",
+                "dexterity": "B",
+                "intelligence": "A",
+                "faith": "B",
+                "arcane": "C",
+                "moveset": "Dagger",
+                "recommended": "Daggers, Katanas (Two-handed), Fist Weapons, Claws, Short Swords, Twinblades, Staves"
+            },
+            {
+                "character": "Recluse",
+                "hp": "D",
+                "fp": "A",
+                "stamina": "C",
+                "strength": "D",
+                "dexterity": "C",
+                "intelligence": "S",
+                "faith": "S",
+                "arcane": "C",
+                "moveset": "None",
+                "recommended": "Staves, Seals, Swords"
+            },
+            {
+                "character": "Ironeye",
+                "hp": "C",
+                "fp": "C",
+                "stamina": "B",
+                "strength": "C",
+                "dexterity": "A",
+                "intelligence": "D",
+                "faith": "D",
+                "arcane": "B",
+                "moveset": "Bow",
+                "recommended": "Bows, Katanas, Thrusting Swords, Daggers"
+            },
+            {
+                "character": "Raider",
+                "hp": "A",
+                "fp": "D",
+                "stamina": "A",
+                "strength": "S",
+                "dexterity": "C",
+                "intelligence": "D",
+                "faith": "D",
+                "arcane": "C",
+                "moveset": "Colossal Weapons, Greataxes & Great Hammers",
+                "raider_bonus": "Raider also has a unique 15% damage bonus when two-handing all of those weapon types, plus also colossal swords.",
+                "recommended": "Colossal Weapons, Greataxes, Great Hammers, Collosal Swords Halberds"
+            },
+            {
+                "character": "Executor",
+                "hp": "B",
+                "fp": "D",
+                "stamina": "B",
+                "strength": "C",
+                "dexterity": "S",
+                "intelligence": "D",
+                "faith": "D",
+                "arcane": "S",
+                "moveset": "Katana",
+                "recommended": "Katanas, Daggers, Thrusting Swords, Bows"
+            },
+            {
+                "character": "Revenant",
+                "hp": "D",
+                "fp": "A",
+                "stamina": "D",
+                "strength": "C",
+                "dexterity": "C",
+                "intelligence": "B",
+                "faith": "S",
+                "arcane": "B",
+                "moveset": "None",
+                "recommended": "Seals, Swords, Fist Weapons"
+            }
+        ],
+        "magic_cocktail": [
+            {
+                "elements": "#magic",
+                "count": 1,
+                "name": "Pure Magic",
+                "effect": "Summons a tracking wisp that detonates on contact, dealing periodic magic damage"
+            },
+            {
+                "elements": "#fire",
+                "count": 1,
+                "name": "Pure Fire",
+                "effect": "Creates a whirlwind of flame; AoE fire damage that burns for some time"
+            },
+            {
+                "elements": "#lightning",
+                "count": 1,
+                "name": "Pure Lightning",
+                "effect": "Bloodhound’s Step: greatly enhances dodging actions with lightning"
+            },
+            {
+                "elements": "#holy",
+                "count": 1,
+                "name": "Pure Holy",
+                "effect": "Divine Shield: increases poise and damage negation (defensive buff)"
+            },
+            {
+                "elements": "#magic#fire",
+                "count": 2,
+                "name": "Magic/Fire",
+                "effect": "Summons a wraith flame that pursues and explodes on enemies"
+            },
+            {
+                "elements": "#magic#lightning",
+                "count": 2,
+                "name": "Magic/Lightning",
+                "effect": "Carian Slash: broad forward slash with a magical blade"
+            },
+            {
+                "elements": "#magic#holy",
+                "count": 2,
+                "name": "Magic/Holy",
+                "effect": "Grants infinite FP for a short time (magic veil for self and allies)"
+            },
+            {
+                "elements": "#fire#lightning",
+                "count": 2,
+                "name": "Fire/Lightning",
+                "effect": "Become a fireball, barrel forward, raining lightning on foes"
+            },
+            {
+                "elements": "#fire#holy",
+                "count": 2,
+                "name": "Fire/Holy",
+                "effect": "Warming Stone: raises max HP and reduces status buildup for allies, lowers enemy max HP"
+            },
+            {
+                "elements": "#lightning#holy",
+                "count": 2,
+                "name": "Lightning/Holy",
+                "effect": "Automatic Parry: layer of lightning parries enemy attacks for a short time"
+            },
+            {
+                "elements": "#magic#fire#lightning",
+                "count": 3,
+                "name": "No Holy",
+                "effect": "AoE gravity orb pulls in enemies, then explodes for heavy damage"
+            },
+            {
+                "elements": "#magic#fire#holy",
+                "count": 3,
+                "name": "No Lightning",
+                "effect": "Mixed affinity breath: damages enemies, restores HP and FP to allies"
+            },
+            {
+                "elements": "#fire#lightning#holy",
+                "count": 3,
+                "name": "No Magic",
+                "effect": "Creates a lightning rod; white lightning strikes after a delay (AoE lightning)"
+            },
+            {
+                "elements": "#magic#lightning#holy",
+                "count": 3,
+                "name": "No Fire",
+                "effect": "AoE cold storm, user retreats in ice block and becomes invulnerable"
+            }
+        ],
+        "level_rune_requirements": [
+            {
+                "level": 1,
+                "runes": 0,
+                "needed_to_15": 513116
+            },
+            {
+                "level": 2,
+                "runes": 3698,
+                "needed_to_15": 509418
+            },
+            {
+                "level": 3,
+                "runes": 7922,
+                "needed_to_15": 501496
+            },
+            {
+                "level": 4,
+                "runes": 12348,
+                "needed_to_15": 489148
+            },
+            {
+                "level": 5,
+                "runes": 16978,
+                "needed_to_15": 472170
+            },
+            {
+                "level": 6,
+                "runes": 21818,
+                "needed_to_15": 450352
+            },
+            {
+                "level": 7,
+                "runes": 26869,
+                "needed_to_15": 423483
+            },
+            {
+                "level": 8,
+                "runes": 32137,
+                "needed_to_15": 391346
+            },
+            {
+                "level": 9,
+                "runes": 37624,
+                "needed_to_15": 353722
+            },
+            {
+                "level": 10,
+                "runes": 43335,
+                "needed_to_15": 310387
+            },
+            {
+                "level": 11,
+                "runes": 49271,
+                "needed_to_15": 261116
+            },
+            {
+                "level": 12,
+                "runes": 55439,
+                "needed_to_15": 205677
+            },
+            {
+                "level": 13,
+                "runes": 61840,
+                "needed_to_15": 143837
+            },
+            {
+                "level": 14,
+                "runes": 68479,
+                "needed_to_15": 75358
+            },
+            {
+                "level": 15,
+                "runes": 75358,
+                "needed_to_15": 0
+            }
+        ],
+        "libra_deals": [
+            {
+                "deal": "I wish to have deep faith.",
+                "effect": "Respec: Overhauls your stats, making Faith your highest attribute. Variants exist for Strength, Dexterity, Intelligence, Arcane."
+            },
+            {
+                "deal": "I desire a flask.",
+                "effect": "Gain 1 additional flask, but lose 10% of your maximum HP permanently."
+            },
+            {
+                "deal": "I want the power of a demon.",
+                "effect": "Gain a passive Frenzied Eye that shoots frenzy projectiles over time. Also causes Madness buildup on yourself."
+            },
+            {
+                "deal": "I desire a powerful weapon.",
+                "effect": "Receive a random weapon from a special list, but lose 2 levels. Possible weapons include: Vyke’s War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan’s Knight Sword, Ordovis’s Greatsword, Halo Scythe."
+            },
+            {
+                "deal": "I want to gain many levels.",
+                "effect": "Gain +2 levels, but lose 1 level every time you use a flask thereafter."
+            },
+            {
+                "deal": "I wish for eventual greatness.",
+                "effect": "Suffer -30% HP, FP, and stamina for 2 minutes, then gain +20% to all three permanently after."
+            },
+            {
+                "deal": "I want to fight at utmost strength.",
+                "effect": "Libra gains 10% defense for 100s. You gain +25% HP and +10% damage for 60s. Libra starts fight in golden form."
+            },
+            {
+                "deal": "I want resistance to ailments.",
+                "effect": "Gain +150 resistance to all status effects, but lose 10% max stamina."
+            },
+            {
+                "deal": "I want to hold death at bay.",
+                "effect": "When HP drops to 20%, automatically heal to 100%. However, you permanently lose 20% max HP."
+            }
+        ],
+        "merchant_deals": [
+            {
+                "deal": "I wish to have great strength",
+                "effect": "Raises Strength but reduces all other stats"
+            },
+            {
+                "deal": "I wish to have great dexterity",
+                "effect": "Raises Dexterity but reduces all other stats"
+            },
+            {
+                "deal": "I wish to expand my intellect",
+                "effect": "Raises Intelligence but reduces all other stats"
+            },
+            {
+                "deal": "I wish to have deep faith",
+                "effect": "Raises Faith but reduces all other stats"
+            },
+            {
+                "deal": "I wish to be in touch with the arcane",
+                "effect": "Raises Arcane but reduces all other stats"
+            },
+            {
+                "deal": "I want resistance to ailments",
+                "effect": "Increases Resistances by +150, but lose 10% Stamina"
+            },
+            {
+                "deal": "I want to hold death at bay",
+                "effect": "Lose 20% max HP. Once per battle, when HP drops to or below 20%, immediately heal back to full HP."
+            },
+            {
+                "deal": "I wish for more agility",
+                "effect": "Gain Stamina in exchange for HP and FP"
+            },
+            {
+                "deal": "I want a high level",
+                "effect": "Gain 3 levels but lose a level every time you drink from your flask"
+            },
+            {
+                "deal": "I desire a flask",
+                "effect": "Adds a Flask Charge but lose 10% max HP"
+            },
+            {
+                "deal": "I desire a powerful weapon",
+                "effect": "Lose 2 levels but randomly get one of the following Weapons: Vyke's War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan Knight's Sword, Ordovis's Greatsword, Halo Scythe. Passive effects are randomly determined."
+            },
+            {
+                "deal": "I wish for eventual greatness",
+                "effect": "Take a -30% HP, FP, and Stamina debuff that lasts for the rest of the day. After that debuff expires at the start of the next day, gain a +20% HP, FP, and Stamina buff permanently. If you die before any of that happens, all aspects of this deal are cancelled."
+            },
+            {
+                "deal": "I want the power of a demon",
+                "effect": "Grants an demonic eye that shoots enemies, which builds up Madness when used"
+            },
+            {
+                "deal": "I want a lot of runes",
+                "effect": "For the cost of 10,000 Runes, places the Symbol of Avarice in a vacant talisman slot. Available only during days 1 and 2."
+            }
+        ]
     }
-  ],
-  "character_stats": [
-    {
-      "Character": "Wylder",
-      "HP": "A",
-      "FP": "C",
-      "Stamina": "B",
-      "Strength": "A",
-      "Dexterity": "B",
-      "Intelligence": "C",
-      "Faith": "C",
-      "Arcane": "C",
-      "Special moveset": "Greatsword",
-      "My recommended weapon classes": "Greatswords, Straight Swords, Flails, Colossal Weapons, Greataxes, Hammers"
-    },
-    {
-      "Character": "Guardian",
-      "HP": "S",
-      "FP": "C",
-      "Stamina": "A",
-      "Strength": "B",
-      "Dexterity": "C",
-      "Intelligence": "D",
-      "Faith": "C",
-      "Arcane": "C",
-      "Special moveset": "Halberd",
-      "My recommended weapon classes": "Halberds, Axes, Great Spears, Thrusting Swords"
-    },
-    {
-      "Character": "Duchess",
-      "HP": "C",
-      "FP": "B",
-      "Stamina": "D",
-      "Strength": "D",
-      "Dexterity": "B",
-      "Intelligence": "A",
-      "Faith": "B",
-      "Arcane": "C",
-      "Special moveset": "Dagger",
-      "My recommended weapon classes": "Daggers, Katanas (Two-handed), Fist Weapons, Claws, Short Swords, Twinblades, Staves"
-    },
-    {
-      "Character": "Recluse",
-      "HP": "D",
-      "FP": "A",
-      "Stamina": "C",
-      "Strength": "D",
-      "Dexterity": "C",
-      "Intelligence": "S",
-      "Faith": "S",
-      "Arcane": "C",
-      "Special moveset": "None",
-      "My recommended weapon classes": "Staves, Seals, Swords"
-    },
-    {
-      "Character": "Ironeye",
-      "HP": "C",
-      "FP": "C",
-      "Stamina": "B",
-      "Strength": "C",
-      "Dexterity": "A",
-      "Intelligence": "D",
-      "Faith": "D",
-      "Arcane": "B",
-      "Special moveset": "Bow",
-      "My recommended weapon classes": "Bows, Katanas, Thrusting Swords, Daggers"
-    },
-    {
-      "Character": "Raider",
-      "HP": "A",
-      "FP": "D",
-      "Stamina": "A",
-      "Strength": "S",
-      "Dexterity": "C",
-      "Intelligence": "D",
-      "Faith": "D",
-      "Arcane": "C",
-      "Special moveset": "Colossal Weapons, Greataxes & Great Hammers",
-      "My recommended weapon classes": "Colossal Weapons, Greataxes, Great Hammers, Collosal Swords Halberds"
-    },
-    {
-      "Character": "Executor",
-      "HP": "B",
-      "FP": "D",
-      "Stamina": "B",
-      "Strength": "C",
-      "Dexterity": "S",
-      "Intelligence": "D",
-      "Faith": "D",
-      "Arcane": "S",
-      "Special moveset": "Katana",
-      "My recommended weapon classes": "Katanas, Daggers, Thrusting Swords, Bows"
-    },
-    {
-      "Character": "Revenant",
-      "HP": "D",
-      "FP": "A",
-      "Stamina": "D",
-      "Strength": "C",
-      "Dexterity": "C",
-      "Intelligence": "B",
-      "Faith": "S",
-      "Arcane": "B",
-      "Special moveset": "None",
-      "My recommended weapon classes": "Seals, Swords, Fist Weapons"
-    }
-  ],
-  "magic_cocktail": [
-    {
-      "Elements": "Magic",
-      "Name": "Pure Magic",
-      "Effect": "Summons a tracking wisp that detonates on contact, dealing periodic magic damage"
-    },
-    {
-      "Elements": "Fire",
-      "Name": "Pure Fire",
-      "Effect": "Creates a whirlwind of flame; AoE fire damage that burns for some time"
-    },
-    {
-      "Elements": "Lightning",
-      "Name": "Pure Lightning",
-      "Effect": "Bloodhound’s Step: greatly enhances dodging actions with lightning"
-    },
-    {
-      "Elements": "Holy",
-      "Name": "Pure Holy",
-      "Effect": "Divine Shield: increases poise and damage negation (defensive buff)"
-    },
-    {
-      "Elements": "Magic, Fire",
-      "Name": "Magic/Fire",
-      "Effect": "Summons a wraith flame that pursues and explodes on enemies"
-    },
-    {
-      "Elements": "Magic, Lightning",
-      "Name": "Magic/Lightning",
-      "Effect": "Carian Slash: broad forward slash with a magical blade"
-    },
-    {
-      "Elements": "Magic, Holy",
-      "Name": "Magic/Holy",
-      "Effect": "Grants infinite FP for a short time (magic veil for self and allies)"
-    },
-    {
-      "Elements": "Fire, Lightning",
-      "Name": "Fire/Lightning",
-      "Effect": "Become a fireball, barrel forward, raining lightning on foes"
-    },
-    {
-      "Elements": "Fire, Holy",
-      "Name": "Fire/Holy",
-      "Effect": "Warming Stone: raises max HP and reduces status buildup for allies, lowers enemy max HP"
-    },
-    {
-      "Elements": "Lightning, Holy",
-      "Name": "Lightning/Holy",
-      "Effect": "Automatic Parry: layer of lightning parries enemy attacks for a short time"
-    },
-    {
-      "Elements": "Magic, Fire, Lightning",
-      "Name": "No Holy",
-      "Effect": "AoE gravity orb pulls in enemies, then explodes for heavy damage"
-    },
-    {
-      "Elements": "Magic, Fire, Holy",
-      "Name": "No Lightning",
-      "Effect": "Mixed affinity breath: damages enemies, restores HP and FP to allies"
-    },
-    {
-      "Elements": "Fire, Lightning, Holy",
-      "Name": "No Magic",
-      "Effect": "Creates a lightning rod; white lightning strikes after a delay (AoE lightning)"
-    },
-    {
-      "Elements": "Magic, Lightning, Holy",
-      "Name": "No Fire",
-      "Effect": "AoE cold storm, user retreats in ice block and becomes invulnerable"
-    }
-  ],
-  "level_rune_requirements": [
-    {
-      "Level": "1",
-      "Runes required": "0",
-      "Runes needed to reach 15": "513,116"
-    },
-    {
-      "Level": "2",
-      "Runes required": "3,698",
-      "Runes needed to reach 15": "509,418"
-    },
-    {
-      "Level": "3",
-      "Runes required": "7,922",
-      "Runes needed to reach 15": "501,496"
-    },
-    {
-      "Level": "4",
-      "Runes required": "12,348",
-      "Runes needed to reach 15": "489,148"
-    },
-    {
-      "Level": "5",
-      "Runes required": "16,978",
-      "Runes needed to reach 15": "472,170"
-    },
-    {
-      "Level": "6",
-      "Runes required": "21,818",
-      "Runes needed to reach 15": "450,352"
-    },
-    {
-      "Level": "7",
-      "Runes required": "26,869",
-      "Runes needed to reach 15": "423,483"
-    },
-    {
-      "Level": "8",
-      "Runes required": "32,137",
-      "Runes needed to reach 15": "391,346"
-    },
-    {
-      "Level": "9",
-      "Runes required": "37,624",
-      "Runes needed to reach 15": "353,722"
-    },
-    {
-      "Level": "10",
-      "Runes required": "43,335",
-      "Runes needed to reach 15": "310,387"
-    },
-    {
-      "Level": "11",
-      "Runes required": "49,271",
-      "Runes needed to reach 15": "261,116"
-    },
-    {
-      "Level": "12",
-      "Runes required": "55,439",
-      "Runes needed to reach 15": "205,677"
-    },
-    {
-      "Level": "13",
-      "Runes required": "61,840",
-      "Runes needed to reach 15": "143,837"
-    },
-    {
-      "Level": "14",
-      "Runes required": "68,479",
-      "Runes needed to reach 15": "75,358"
-    },
-    {
-      "Level": "15",
-      "Runes required": "75,358",
-      "Runes needed to reach 15": "0"
-    }
-  ],
-  "libra_deals_boss": [
-    {
-      "Deal": "I wish to have deep faith.",
-      "Effect": "Respec: Overhauls your stats, making Faith your highest attribute. Variants exist for Strength, Dexterity, Intelligence, Arcane."
-    },
-    {
-      "Deal": "I desire a flask.",
-      "Effect": "Gain 1 additional flask, but lose 10% of your maximum HP permanently."
-    },
-    {
-      "Deal": "I want the power of a demon.",
-      "Effect": "Gain a passive Frenzied Eye that shoots frenzy projectiles over time. Also causes Madness buildup on yourself."
-    },
-    {
-      "Deal": "I desire a powerful weapon.",
-      "Effect": "Receive a random weapon from a special list, but lose 2 levels. Possible weapons include: Vyke’s War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan’s Knight Sword, Ordovis’s Greatsword, Halo Scythe."
-    },
-    {
-      "Deal": "I want to gain many levels.",
-      "Effect": "Gain +2 levels, but lose 1 level every time you use a flask thereafter."
-    },
-    {
-      "Deal": "I wish for eventual greatness.",
-      "Effect": "Suffer -30% HP, FP, and stamina for 2 minutes, then gain +20% to all three permanently after."
-    },
-    {
-      "Deal": "I want to fight at utmost strength.",
-      "Effect": "Libra gains 10% defense for 100s. You gain +25% HP and +10% damage for 60s. Libra starts fight in golden form."
-    },
-    {
-      "Deal": "I want resistance to ailments.",
-      "Effect": "Gain +150 resistance to all status effects, but lose 10% max stamina."
-    },
-    {
-      "Deal": "I want to hold death at bay.",
-      "Effect": "When HP drops to 20%, automatically heal to 100%. However, you permanently lose 20% max HP."
-    }
-  ],
-  "scale_bearing_merchant_deals_overworld": [
-    {
-      "Deal": "I wish to have great strength",
-      "Effect": "Raises Strength but reduces all other stats"
-    },
-    {
-      "Deal": "I wish to have great dexterity",
-      "Effect": "Raises Dexterity but reduces all other stats"
-    },
-    {
-      "Deal": "I wish to expand my intellect",
-      "Effect": "Raises Intelligence but reduces all other stats"
-    },
-    {
-      "Deal": "I wish to have deep faith",
-      "Effect": "Raises Faith but reduces all other stats"
-    },
-    {
-      "Deal": "I wish to be in touch with the arcane",
-      "Effect": "Raises Arcane but reduces all other stats"
-    },
-    {
-      "Deal": "I want resistance to ailments",
-      "Effect": "Increases Resistances by +150, but lose 10% Stamina"
-    },
-    {
-      "Deal": "I want to hold death at bay",
-      "Effect": "Lose 20% max HP. Once per battle, when HP drops to or below 20%, immediately heal back to full HP."
-    },
-    {
-      "Deal": "I wish for more agility",
-      "Effect": "Gain Stamina in exchange for HP and FP"
-    },
-    {
-      "Deal": "I want a high level",
-      "Effect": "Gain 3 levels but lose a level every time you drink from your flask"
-    },
-    {
-      "Deal": "I desire a flask",
-      "Effect": "Adds a Flask Charge but lose 10% max HP"
-    },
-    {
-      "Deal": "I desire a powerful weapon",
-      "Effect": "Lose 2 levels but randomly get one of the following Weapons: Vyke's War Spear, Black Knife, Erdtree Bow, Frenzied Flame Seal, Fingerprint Stone Shield, Miquellan Knight's Sword, Ordovis's Greatsword, Halo Scythe. Passive effects are randomly determined."
-    },
-    {
-      "Deal": "I wish for eventual greatness",
-      "Effect": "Take a -30% HP, FP, and Stamina debuff that lasts for the rest of the day. After that debuff expires at the start of the next day, gain a +20% HP, FP, and Stamina buff permanently. If you die before any of that happens, all aspects of this deal are cancelled."
-    },
-    {
-      "Deal": "I want the power of a demon",
-      "Effect": "Grants an demonic eye that shoots enemies, which builds up Madness when used"
-    },
-    {
-      "Deal": "I want a lot of runes",
-      "Effect": "For the cost of 10,000 Runes, places the Symbol of Avarice in a vacant talisman slot. Available only during days 1 and 2."
-    }
-  ]
 }
