@@ -59,7 +59,7 @@
                 "frenzy": "Immune"
             },
             {
-                "boss": "Gnoster (Scorpion)",
+                "boss": "Faurtis Stoneshield (Scorpion)",
                 "weakness": "#fire",
                 "dealt_damage": "#magic",
                 "standard": "-10%",

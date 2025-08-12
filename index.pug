@@ -18,6 +18,15 @@ html(lang="en")
                 div https://baspla.github.io/nightreign/
                 button#shareBtn(class="ml-2 px-2 rounded-lg bg-green-900 text-white cursor-pointer hidden plausible-event-name=Share+Button") Share this page
         div(class="w-full flex flex-row justify-center gap-8 max-w-6xl flex-wrap lg:flex-nowrap")
+            div(class="bg-gray-800 rounded-xl shadow-lg p-6  w-full flex flex-col lg:max-w-xl max-w-full")
+                div.flex.flex-row.justify-between.items-center.mb-4
+                    h1.text-2xl.font-bold.text-purple-300.flex-shrink-0 Pinned Boss
+                    p.text-gray-400.text-sm Here you can pin the boss you are currently fighting.
+                div.h-full.flex.flex-col.border-dashed.border-gray-700.border-2.rounded-xl.transition#drop-target
+                    div.p-4.flex.flex-col.items-center.justify-center.h-full#drop-empty-indicator
+                        p.text-gray-400.text-sm.text-center
+                            | Just drag the boss here
+                    div.flex.flex-col.gap-2.hidden#pinned-stats
             div(class="bg-gray-800 rounded-xl shadow-lg p-6 px-8 w-full flex flex-col items-center lg:max-w-sm max-w-full")
                 h1.text-2xl.font-bold.text-purple-300.mb-4 Nightreign Timer
                 div#phase.text-xl.text-white.mb-2 Roundtable
@@ -41,16 +50,70 @@ html(lang="en")
                     button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+2", data-phase="1") 2
                     button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+3", data-phase="2") 3
                     button(class="phase-jump bg-gray-700 hover:bg-purple-500 text-xs text-gray-300 px-2 py-1 rounded shadow focus:outline-none transition plausible-event-name=Timer+Button+4", data-phase="3") 4
-            div(class="bg-gray-800 rounded-xl shadow-lg p-6  w-full flex flex-col lg:max-w-xl max-w-full")
-                div.flex.flex-row.justify-between.items-center.mb-4
-                    h1.text-2xl.font-bold.text-purple-300.flex-shrink-0 Pinned Boss
-                    p.text-gray-400.text-sm Here you can pin the boss you are currently fighting.
-                div.h-full.flex.flex-col.border-dashed.border-gray-700.border-2.rounded-xl.transition#drop-target
-                    div.p-4.flex.flex-col.items-center.justify-center.h-full#drop-empty-indicator
-                        p.text-gray-400.text-sm.text-center
-                            | Just drag the boss here
-                    div.flex.flex-col.gap-2.hidden#pinned-stats
 
+        div#news-bar(class="bg-gray-800 rounded-lg p-4 text-sm text-gray-200 max-w-6xl flex flex-row items-center gap-2 relative", style="display: none;")
+            // "NEWS" label, vertically centered
+            div.flex.items-center(class="flex-shrink-0")
+            span(
+                class="font-bold text-purple-300 text-lg tracking-widest select-none"
+            ) NEWS
+            // News content
+            div
+            p Datamined text suggests a new endless Expedition mode called
+                span.font-bold  Deep of Night
+                | , featuring MMR/ELO-style rating, five Depth tiers, skill-based matchmaking, randomized targets, “magmafied” enemies/bosses, and mode-exclusive weapons and relics with tradeoffs.
+                | I will add more details and helper features once it is officially announced or released.
+                |
+                a(
+                href="https://www.reddit.com/user/Adminisitrator/comments/1mh908l/elden_ring_nightreign_new_mode_deep_of_night/"
+                target="_blank"
+                rel="noopener"
+                class="text-purple-300 hover:text-purple-200 underline"
+                ) Reddit: “Elden Ring Nightreign new mode: Deep of Night”
+                span#newsDate.text-xs.text-gray-400.ml-1 12.08.2025
+            // X button to close
+            button#close-news-bar(
+                class="ml-auto text-gray-400 hover:text-gray-200 p-1 rounded transition focus:outline-none flex items-center"
+                aria-label="Close news"
+                type="button"
+                onclick="document.getElementById('news-bar').style.display='none';"
+            )
+                svg(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke="currentColor", class="w-5 h-5")
+                    path(stroke-linecap="round", stroke-linejoin="round", stroke-width="2", d="M6 18L18 6M6 6l12 12")
+
+        script.
+            (function() {
+            function getCookie(name) {
+                const value = "; " + document.cookie;
+                const parts = value.split("; " + name + "=");
+                if (parts.length === 2) return parts.pop().split(";").shift();
+            }
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+            }
+            document.addEventListener("DOMContentLoaded", function() {
+                var newsBar = document.getElementById('news-bar');
+                var newsDateElem = document.getElementById('newsDate');
+                var newsDate = newsDateElem ? newsDateElem.textContent.trim() : '';
+                var closedNews = getCookie('newsClosed');
+                // closedNews format: "date"
+                if (newsBar && closedNews !== newsDate) {
+                newsBar.style.display = '';
+                }
+                var closeBtn = document.getElementById('close-news-bar');
+                if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    if (newsDate) setCookie('newsClosed', newsDate, 30);
+                });
+                }
+            });
+            })();
 
         details(open class="w-full max-w-6xl plausible-event-name=Collapsible+Boss+Weaknesses")
             summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg font-semibold") Boss Weaknesses
@@ -145,7 +208,9 @@ html(lang="en")
                 p.text-gray-400.text-xs.mt-4
                     | Percent: Bonus/Reduction in damage. Higher numbers = Less susceptible to status
                     | effects. The resistance numbers are the buildup amount to trigger it. "Dealing Damage" is the type of damage the
-                    | Boss deals to you.
+                    | Boss deals to you. The Everdark Sovereigns seem to have the same weaknesses and resistances as the normal bosses,
+                    | except for Maris who you fight with the Storm Ruler.
+        
 
         details(class="w-full max-w-6xl plausible-event-name=Collapsible+Character+Stats")
             summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg font-semibold") Character Stats
@@ -259,6 +324,26 @@ html(lang="en")
             | This site is for my personal use and is not affiliated with any game or company.
             | All characters, names, and related items are copyrighted by their respective owners. I can't guarantee the accuracy
             | of any of the data.
+            |
+            button#clear-cookies-btn(
+                class="hover:text-purple-200 underline cursor-pointer text-xs"
+                type="button"
+            ) Clear all technical cookies
+            script.
+                document.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.getElementById('clear-cookies-btn');
+                    if (btn) {
+                        btn.addEventListener('click', function() {
+                            // Remove all cookies for this domain (basic approach)
+                            document.cookie.split(";").forEach(function(c) {
+                                var eqPos = c.indexOf("=");
+                                var name = eqPos > -1 ? c.substr(0, eqPos) : c;
+                                document.cookie = name.trim() + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/";
+                            });
+                            location.reload();
+                        });
+                    }
+                });
 
         script.
             const data = !{JSON.stringify(data)};
