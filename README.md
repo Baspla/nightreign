@@ -2,5 +2,5 @@
 ## Generate the Page
 To generate the page run
 ``` bash
-pug index.pug
+pug index.pug --obj data.json
 ```
