@@ -241,17 +241,17 @@ html(lang="en")
                                         if (grade === 'A' || grade === 'B') return 'text-green-400';
                                         return 'text-gray-400'; // C, D and others
                                     };
-                                td.px-2.py-2.border-b.border-gray-700= item.character
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.hp))= item.hp
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.fp))= item.fp
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.stamina))= item.stamina
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.strength))= item.strength
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.dexterity))= item.dexterity
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.intelligence))= item.intelligence
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.faith))= item.faith
-                                td(class="px-2 py-2 border-b border-gray-700 text-center " + getGradeClass(item.arcane))= item.arcane
-                                td(class="px-2 py-2 border-b border-gray-700", title=item.raider_bonus ? item.raider_bonus : null)= item.moveset
-                                td.px-2.py-2.border-b.border-gray-700= item.recommended
+                                td.px-2.py-2= item.character
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.hp))= item.hp
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.fp))= item.fp
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.stamina))= item.stamina
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.strength))= item.strength
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.dexterity))= item.dexterity
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.intelligence))= item.intelligence
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.faith))= item.faith
+                                td(class="px-2 py-2 text-center " + getGradeClass(item.arcane))= item.arcane
+                                td(class="px-2 py-2 border-gray-700", title=item.raider_bonus ? item.raider_bonus : null)= item.moveset
+                                td.px-2.py-2= item.recommended
 
         details(class="w-full max-w-6xl plausible-event-name=Collapsible+Magic+Cocktail")
             summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg  font-semibold") Magic Cocktail
@@ -269,10 +269,10 @@ html(lang="en")
                                     const elements = item.elements.split('#').filter(Boolean);
                                     const tdColspan = 6 / elements.length;
                                 each element in elements
-                                    td(colspan=tdColspan, class="px-2 py-2 border-b border-gray-700 text-center")
+                                    td(colspan=tdColspan, class="px-2 py-2 text-center")
                                         img(src=element + '.webp', alt=element.replace(/^[a-z]/, (m) => m.toUpperCase()), class="inline-block w-5 h-5 align-middle")
-                                td.px-2.py-2.border-b.border-gray-700= item.name
-                                td.px-2.py-2.border-b.border-gray-700= item.effect
+                                td.px-2.py-2= item.name
+                                td.px-2.py-2= item.effect
 
         details(class="w-full max-w-6xl plausible-event-name=Collapsible+Level+Rune+Requirements")
             summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg  font-semibold") Level Rune Requirements
@@ -286,9 +286,9 @@ html(lang="en")
                     tbody
                         each item, index in data.level_rune_requirements
                             tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
-                                td.px-2.py-2.border-b.border-gray-700= item.level
-                                td.px-2.py-2.border-b.border-gray-700= item.runes.toLocaleString()
-                                td.px-2.py-2.border-b.border-gray-700= item.needed_to_15.toLocaleString()
+                                td.px-2.py-2= item.level
+                                td.px-2.py-2= item.runes.toLocaleString()
+                                td.px-2.py-2= item.needed_to_15.toLocaleString()
                 p.text-gray-400.text-xs.mt-4 Total runes required to reach level 15: 513,116
 
         details(class="w-full max-w-6xl plausible-event-name=Collapsible+Combined+Deals")
@@ -306,8 +306,8 @@ html(lang="en")
                             // Loop through libra_deals data
                             each item, index in data.libra_deals
                                 tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
-                                    td.px-2.py-2.border-b.border-gray-700= item.deal
-                                    td.px-2.py-2.border-b.border-gray-700= item.effect
+                                    td.px-2.py-2= item.deal
+                                    td.px-2.py-2= item.effect
                 // Scale-bearing Merchant Deals (Overworld)
                 div(class="w-1/2 overflow-x-auto")
                     h3.text-lg.font-semibold.mb-2.text-purple-300 Scale-bearing Merchant Deals (Overworld)
@@ -320,8 +320,8 @@ html(lang="en")
                             // Loop through merchant_deals data
                             each item, index in data.merchant_deals
                                 tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
-                                    td.px-2.py-2.border-b.border-gray-700= item.deal
-                                    td.px-2.py-2.border-b.border-gray-700= item.effect
+                                    td.px-2.py-2= item.deal
+                                    td.px-2.py-2= item.effect
 
         p.text-gray-400.text-xs.mt-4
             | This site is for my personal use and is not affiliated with any game or company.
