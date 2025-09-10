@@ -231,7 +231,6 @@ html(lang="en")
                             th.px-2.py-2.border-b.border-gray-700 Faith
                             th.px-2.py-2.border-b.border-gray-700 Arcane
                             th.px-2.py-2.border-b.border-gray-700 Special moveset
-                            th.px-2.py-2.border-b.border-gray-700 My recommended weapon classes
                     tbody
                         each item, index in data.character_stats
                             tr(class=(index % 2 == 0 ? "bg-gray-700" : "bg-gray-800"))
@@ -250,8 +249,7 @@ html(lang="en")
                                 td(class="px-2 py-2 text-center " + getGradeClass(item.intelligence))= item.intelligence
                                 td(class="px-2 py-2 text-center " + getGradeClass(item.faith))= item.faith
                                 td(class="px-2 py-2 text-center " + getGradeClass(item.arcane))= item.arcane
-                                td(class="px-2 py-2 border-gray-700", title=item.raider_bonus ? item.raider_bonus : null)= item.moveset
-                                td.px-2.py-2= item.recommended
+                                td(class="px-2 py-2", title=item.raider_bonus ? item.raider_bonus : null)= item.moveset
 
         details(class="w-full max-w-6xl plausible-event-name=Collapsible+Magic+Cocktail")
             summary(class="cursor-pointer text-gray-300 hover:text-purple-400 transition mb-2 text-lg  font-semibold") Magic Cocktail

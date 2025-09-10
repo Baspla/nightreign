@@ -204,7 +204,6 @@
                 "faith": "C",
                 "arcane": "C",
                 "moveset": "Greatsword",
-                "recommended": "Greatswords, Straight Swords, Flails, Colossal Weapons, Greataxes, Hammers"
             },
             {
                 "character": "Guardian",
@@ -217,7 +216,6 @@
                 "faith": "C",
                 "arcane": "C",
                 "moveset": "Halberd",
-                "recommended": "Halberds, Axes, Great Spears, Thrusting Swords"
             },
             {
                 "character": "Duchess",
@@ -229,8 +227,7 @@
                 "intelligence": "A",
                 "faith": "B",
                 "arcane": "C",
-                "moveset": "Dagger",
-                "recommended": "Daggers, Katanas (Two-handed), Fist Weapons, Claws, Short Swords, Twinblades, Staves"
+                "moveset": "Dagger"
             },
             {
                 "character": "Recluse",
@@ -242,8 +239,7 @@
                 "intelligence": "S",
                 "faith": "S",
                 "arcane": "C",
-                "moveset": "None",
-                "recommended": "Staves, Seals, Swords"
+                "moveset": "None"
             },
             {
                 "character": "Ironeye",
@@ -255,8 +251,7 @@
                 "intelligence": "D",
                 "faith": "D",
                 "arcane": "B",
-                "moveset": "Bow",
-                "recommended": "Bows, Katanas, Thrusting Swords, Daggers"
+                "moveset": "Bow"
             },
             {
                 "character": "Raider",
@@ -269,8 +264,7 @@
                 "faith": "D",
                 "arcane": "C",
                 "moveset": "Colossal Weapons, Greataxes & Great Hammers",
-                "raider_bonus": "Raider also has a unique 15% damage bonus when two-handing all of those weapon types, plus also colossal swords.",
-                "recommended": "Colossal Weapons, Greataxes, Great Hammers, Collosal Swords Halberds"
+                "raider_bonus": "Raider also has a unique 15% damage bonus when two-handing all of those weapon types, plus also colossal swords."
             },
             {
                 "character": "Executor",
@@ -282,8 +276,7 @@
                 "intelligence": "D",
                 "faith": "D",
                 "arcane": "S",
-                "moveset": "Katana",
-                "recommended": "Katanas, Daggers, Thrusting Swords, Bows"
+                "moveset": "Katana"
             },
             {
                 "character": "Revenant",
@@ -295,8 +288,7 @@
                 "intelligence": "B",
                 "faith": "S",
                 "arcane": "B",
-                "moveset": "None",
-                "recommended": "Seals, Swords, Fist Weapons"
+                "moveset": "None"
             }
         ],
         "magic_cocktail": [
