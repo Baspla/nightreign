@@ -4,7 +4,7 @@
 const phases = [
     { name: "Storm 1 Phase", duration: 4 * 60 + 25 },
     { name: "Storm is shrinking", duration: 2 * 60 + 55 },
-    { name: "Strom 2 Phase", duration: 3 * 60 + 25 },
+    { name: "Storm 2 Phase", duration: 3 * 60 + 25 },
     { name: "Storm is shrinking further", duration: 2 * 60 + 55 },
 ];
 const bossFightName = "Boss Fight";
