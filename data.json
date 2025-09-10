@@ -2,6 +2,7 @@
     "data": {
         "boss_weaknesses": [
             {
+                "expedition": "Tricephalos",
                 "boss": "Gladius",
                 "weakness": "#holy",
                 "dealt_damage": "#fire",
@@ -21,6 +22,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Gaping Jaw",
                 "boss": "Adel",
                 "weakness": "#poison",
                 "dealt_damage": "#lightning#bleed#poison",
@@ -40,6 +42,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Sentient Pest",
                 "boss": "Gnoster (Moth)",
                 "weakness": "#fire",
                 "dealt_damage": "#magic#poison",
@@ -59,6 +62,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Sentient Pest",
                 "boss": "Faurtis Stoneshield (Scorpion)",
                 "weakness": "#fire",
                 "dealt_damage": "#magic",
@@ -78,6 +82,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Augur",
                 "boss": "Maris",
                 "weakness": "#lightning",
                 "dealt_damage": "#magic#sleep",
@@ -97,6 +102,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Equilibrious Beast",
                 "boss": "Libra",
                 "weakness": "#frenzy",
                 "dealt_damage": "#holy#frenzy",
@@ -116,6 +122,7 @@
                 "frenzy": "154"
             },
             {
+                "expedition": "Darkdrift Knight",
                 "boss": "Fulghor",
                 "weakness": "#lightning",
                 "dealt_damage": "#holy",
@@ -135,6 +142,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Fissure in the Fog",
                 "boss": "Caligo",
                 "weakness": "#fire",
                 "dealt_damage": "#magic#frostbite",
@@ -154,6 +162,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Night Aspect",
                 "boss": "The Shape Of Night",
                 "weakness": "#holy",
                 "dealt_damage": "",
@@ -173,6 +182,7 @@
                 "frenzy": "Immune"
             },
             {
+                "expedition": "Night Aspect",
                 "boss": "Heolstor",
                 "weakness": "#holy",
                 "dealt_damage": "#magic#fire#holy#lightning#frenzy#sleep#deathblight#bleed#poison#rot",
