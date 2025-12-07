@@ -181,9 +181,11 @@ html(lang="en")
                                         return '';
                                     };
                                     const getStatusClass = (val) => {
+                                        if (val === '84') return 'text-green-500 font-bold';
                                         if (val === '154') return 'text-green-500';
                                         if (val === '252') return 'text-yellow-500';
                                         if (val === '541') return 'text-orange-500';
+                                        if (val === '542') return 'text-orange-500';
                                         if (val === 'Immune') return 'text-red-500';
                                         return '';
                                     };
