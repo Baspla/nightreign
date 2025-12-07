@@ -200,6 +200,46 @@
                 "rot": "252",
                 "sleep": "541",
                 "frenzy": "Immune"
+            },
+            {
+                "expedition": "Balancers",
+                "boss": "Weapon-Bequeathed Harmonia",
+                "weakness": "#sleep",
+                "dealt_damage": "",
+                "standard": "+0%",
+                "slash": "-8%",
+                "strike": "+10%",
+                "pierce": "+0%",
+                "magic": "+0%",
+                "fire": "-8%",
+                "lightning": "-10%",
+                "holy": "-30%",
+                "bleed": "252",
+                "frostbite": "252",
+                "poison": "252",
+                "rot": "252",
+                "sleep": "84",
+                "frenzy": "Immune"
+            },
+            {
+                "expedition": "Dreglord",
+                "boss": "Traitorous Straghess",
+                "weakness": "#holy",
+                "dealt_damage": "",
+                "standard": "+0%",
+                "slash": "+10%",
+                "strike": "+0%",
+                "pierce": "+10%",
+                "magic": "+0%",
+                "fire": "+20%",
+                "lightning": "-10%",
+                "holy": "+25%",
+                "bleed": "542",
+                "frostbite": "542",
+                "poison": "252",
+                "rot": "252",
+                "sleep": "252",
+                "frenzy": "Immune"
             }
         ],
         "character_stats": [
@@ -213,7 +253,7 @@
                 "intelligence": "C",
                 "faith": "C",
                 "arcane": "C",
-                "moveset": "Greatsword",
+                "moveset": "Greatsword"
             },
             {
                 "character": "Guardian",
@@ -225,7 +265,7 @@
                 "intelligence": "D",
                 "faith": "C",
                 "arcane": "C",
-                "moveset": "Halberd",
+                "moveset": "Halberd"
             },
             {
                 "character": "Duchess",
@@ -299,6 +339,30 @@
                 "faith": "S",
                 "arcane": "B",
                 "moveset": "None"
+            },
+            {
+                "character": "Scholar",
+                "hp": "B",
+                "fp": "B",
+                "stamina": "B",
+                "strength": "D",
+                "dexterity": "C",
+                "intelligence": "C",
+                "faith": "C",
+                "arcane": "S",
+                "moveset": "Thrusting Swords"
+            },
+            {
+                "character": "Undertaker",
+                "hp": "B",
+                "fp": "C",
+                "stamina": "C",
+                "strength": "A",
+                "dexterity": "D",
+                "intelligence": "D",
+                "faith": "A",
+                "arcane": "C",
+                "moveset": "Hammers"
             }
         ],
         "magic_cocktail": [
